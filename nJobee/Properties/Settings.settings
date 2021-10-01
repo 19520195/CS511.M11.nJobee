@@ -2,11 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="nJobee.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="BackColor" Type="System.Drawing.Color" Scope="Application">
+    <Setting Name="BackColorA" Type="System.Drawing.Color" Scope="Application">
       <Value Profile="(Default)">253, 217, 120</Value>
     </Setting>
     <Setting Name="BackColorB" Type="System.Drawing.Color" Scope="Application">
       <Value Profile="(Default)">254, 237, 190</Value>
+    </Setting>
+    <Setting Name="BackColorC" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">253, 197, 100</Value>
     </Setting>
     <Setting Name="Font" Type="System.Drawing.Font" Scope="Application">
       <Value Profile="(Default)">Montserrat, 14.25pt</Value>
@@ -19,9 +22,6 @@
     </Setting>
     <Setting Name="Phone" Type="System.String" Scope="User">
       <Value Profile="(Default)">+840019520195</Value>
-    </Setting>
-    <Setting Name="BackColorC" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">253, 197, 100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

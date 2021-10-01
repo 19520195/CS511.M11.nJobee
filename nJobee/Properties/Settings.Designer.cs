@@ -26,9 +26,9 @@ namespace nJobee.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("253, 217, 120")]
-        public global::System.Drawing.Color BackColor {
+        public global::System.Drawing.Color BackColorA {
             get {
-                return ((global::System.Drawing.Color)(this["BackColor"]));
+                return ((global::System.Drawing.Color)(this["BackColorA"]));
             }
         }
         
@@ -38,6 +38,15 @@ namespace nJobee.Properties {
         public global::System.Drawing.Color BackColorB {
             get {
                 return ((global::System.Drawing.Color)(this["BackColorB"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("253, 197, 100")]
+        public global::System.Drawing.Color BackColorC {
+            get {
+                return ((global::System.Drawing.Color)(this["BackColorC"]));
             }
         }
         
@@ -83,18 +92,6 @@ namespace nJobee.Properties {
             }
             set {
                 this["Phone"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("253, 197, 100")]
-        public global::System.Drawing.Color BackColorC {
-            get {
-                return ((global::System.Drawing.Color)(this["BackColorC"]));
-            }
-            set {
-                this["BackColorC"] = value;
             }
         }
     }

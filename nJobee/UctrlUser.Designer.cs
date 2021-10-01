@@ -123,7 +123,7 @@ namespace nJobee
       // 
       // UctrlUser
       // 
-      this.BackColor = global::nJobee.Properties.Settings.Default.BackColor;
+      this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
       this.Controls.Add(this.ButtonSave);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);

@@ -15,6 +15,16 @@ namespace nJobee
     public Master()
     {
       InitializeComponent();
+
+      // Binding selection for control buttons
+      ButtonHome.Click += ChangeSelection; 
+      ButtonActivities.Click += ChangeSelection; 
+      ButtonAccount.Click += ChangeSelection; 
+    }
+
+    private void ChangeSelection(object sender, EventArgs e)
+    {
+      PanelSlide.Location = ((Control)sender).Location;
     }
   }
 }

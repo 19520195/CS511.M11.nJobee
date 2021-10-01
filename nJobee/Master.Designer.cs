@@ -33,10 +33,11 @@ namespace nJobee
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Master));
       this.PanelLeft = new System.Windows.Forms.Panel();
       this.PanelControl = new System.Windows.Forms.Panel();
-      this.ButtonUser = new System.Windows.Forms.Button();
+      this.PanelSlide = new System.Windows.Forms.Panel();
+      this.ButtonAccount = new System.Windows.Forms.Button();
       this.ImageControl = new System.Windows.Forms.ImageList(this.components);
-      this.ButtonActivity = new System.Windows.Forms.Button();
-      this.ButtonFinding = new System.Windows.Forms.Button();
+      this.ButtonActivities = new System.Windows.Forms.Button();
+      this.ButtonHome = new System.Windows.Forms.Button();
       this.PanelUser = new System.Windows.Forms.Panel();
       this.LabelFullname = new System.Windows.Forms.Label();
       this.PicboxAvatar = new System.Windows.Forms.PictureBox();
@@ -59,9 +60,10 @@ namespace nJobee
       // 
       // PanelControl
       // 
-      this.PanelControl.Controls.Add(this.ButtonUser);
-      this.PanelControl.Controls.Add(this.ButtonActivity);
-      this.PanelControl.Controls.Add(this.ButtonFinding);
+      this.PanelControl.Controls.Add(this.PanelSlide);
+      this.PanelControl.Controls.Add(this.ButtonAccount);
+      this.PanelControl.Controls.Add(this.ButtonActivities);
+      this.PanelControl.Controls.Add(this.ButtonHome);
       this.PanelControl.Dock = System.Windows.Forms.DockStyle.Fill;
       this.PanelControl.Location = new System.Drawing.Point(0, 165);
       this.PanelControl.Margin = new System.Windows.Forms.Padding(0);
@@ -69,25 +71,33 @@ namespace nJobee
       this.PanelControl.Size = new System.Drawing.Size(240, 375);
       this.PanelControl.TabIndex = 5;
       // 
-      // ButtonUser
+      // PanelSlide
       // 
-      this.ButtonUser.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
-      this.ButtonUser.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-      this.ButtonUser.Dock = System.Windows.Forms.DockStyle.Top;
-      this.ButtonUser.FlatAppearance.BorderSize = 0;
-      this.ButtonUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.ButtonUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.ButtonUser.ImageIndex = 3;
-      this.ButtonUser.ImageList = this.ImageControl;
-      this.ButtonUser.Location = new System.Drawing.Point(0, 96);
-      this.ButtonUser.Margin = new System.Windows.Forms.Padding(0);
-      this.ButtonUser.Name = "ButtonUser";
-      this.ButtonUser.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
-      this.ButtonUser.Size = new System.Drawing.Size(240, 48);
-      this.ButtonUser.TabIndex = 5;
-      this.ButtonUser.Text = "Tài khoản";
-      this.ButtonUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.ButtonUser.UseVisualStyleBackColor = false;
+      this.PanelSlide.BackColor = System.Drawing.Color.Black;
+      this.PanelSlide.Location = new System.Drawing.Point(0, 0);
+      this.PanelSlide.Name = "PanelSlide";
+      this.PanelSlide.Size = new System.Drawing.Size(4, 48);
+      this.PanelSlide.TabIndex = 1;
+      // 
+      // ButtonAccount
+      // 
+      this.ButtonAccount.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
+      this.ButtonAccount.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+      this.ButtonAccount.Dock = System.Windows.Forms.DockStyle.Top;
+      this.ButtonAccount.FlatAppearance.BorderSize = 0;
+      this.ButtonAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.ButtonAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.ButtonAccount.ImageIndex = 3;
+      this.ButtonAccount.ImageList = this.ImageControl;
+      this.ButtonAccount.Location = new System.Drawing.Point(0, 96);
+      this.ButtonAccount.Margin = new System.Windows.Forms.Padding(0);
+      this.ButtonAccount.Name = "ButtonAccount";
+      this.ButtonAccount.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
+      this.ButtonAccount.Size = new System.Drawing.Size(240, 48);
+      this.ButtonAccount.TabIndex = 5;
+      this.ButtonAccount.Text = "Tài khoản";
+      this.ButtonAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.ButtonAccount.UseVisualStyleBackColor = false;
       // 
       // ImageControl
       // 
@@ -98,45 +108,45 @@ namespace nJobee
       this.ImageControl.Images.SetKeyName(2, "Settings.png");
       this.ImageControl.Images.SetKeyName(3, "User.png");
       // 
-      // ButtonActivity
+      // ButtonActivities
       // 
-      this.ButtonActivity.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
-      this.ButtonActivity.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-      this.ButtonActivity.Dock = System.Windows.Forms.DockStyle.Top;
-      this.ButtonActivity.FlatAppearance.BorderSize = 0;
-      this.ButtonActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.ButtonActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.ButtonActivity.ImageIndex = 0;
-      this.ButtonActivity.ImageList = this.ImageControl;
-      this.ButtonActivity.Location = new System.Drawing.Point(0, 48);
-      this.ButtonActivity.Margin = new System.Windows.Forms.Padding(0);
-      this.ButtonActivity.Name = "ButtonActivity";
-      this.ButtonActivity.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
-      this.ButtonActivity.Size = new System.Drawing.Size(240, 48);
-      this.ButtonActivity.TabIndex = 3;
-      this.ButtonActivity.Text = "Hoạt động";
-      this.ButtonActivity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.ButtonActivity.UseVisualStyleBackColor = false;
+      this.ButtonActivities.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
+      this.ButtonActivities.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+      this.ButtonActivities.Dock = System.Windows.Forms.DockStyle.Top;
+      this.ButtonActivities.FlatAppearance.BorderSize = 0;
+      this.ButtonActivities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.ButtonActivities.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.ButtonActivities.ImageIndex = 0;
+      this.ButtonActivities.ImageList = this.ImageControl;
+      this.ButtonActivities.Location = new System.Drawing.Point(0, 48);
+      this.ButtonActivities.Margin = new System.Windows.Forms.Padding(0);
+      this.ButtonActivities.Name = "ButtonActivities";
+      this.ButtonActivities.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
+      this.ButtonActivities.Size = new System.Drawing.Size(240, 48);
+      this.ButtonActivities.TabIndex = 3;
+      this.ButtonActivities.Text = "Hoạt động";
+      this.ButtonActivities.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.ButtonActivities.UseVisualStyleBackColor = false;
       // 
-      // ButtonFinding
+      // ButtonHome
       // 
-      this.ButtonFinding.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
-      this.ButtonFinding.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-      this.ButtonFinding.Dock = System.Windows.Forms.DockStyle.Top;
-      this.ButtonFinding.FlatAppearance.BorderSize = 0;
-      this.ButtonFinding.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.ButtonFinding.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.ButtonFinding.ImageIndex = 1;
-      this.ButtonFinding.ImageList = this.ImageControl;
-      this.ButtonFinding.Location = new System.Drawing.Point(0, 0);
-      this.ButtonFinding.Margin = new System.Windows.Forms.Padding(0);
-      this.ButtonFinding.Name = "ButtonFinding";
-      this.ButtonFinding.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
-      this.ButtonFinding.Size = new System.Drawing.Size(240, 48);
-      this.ButtonFinding.TabIndex = 0;
-      this.ButtonFinding.Text = "Tìm kiếm";
-      this.ButtonFinding.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.ButtonFinding.UseVisualStyleBackColor = false;
+      this.ButtonHome.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
+      this.ButtonHome.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+      this.ButtonHome.Dock = System.Windows.Forms.DockStyle.Top;
+      this.ButtonHome.FlatAppearance.BorderSize = 0;
+      this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.ButtonHome.ImageIndex = 1;
+      this.ButtonHome.ImageList = this.ImageControl;
+      this.ButtonHome.Location = new System.Drawing.Point(0, 0);
+      this.ButtonHome.Margin = new System.Windows.Forms.Padding(0);
+      this.ButtonHome.Name = "ButtonHome";
+      this.ButtonHome.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
+      this.ButtonHome.Size = new System.Drawing.Size(240, 48);
+      this.ButtonHome.TabIndex = 0;
+      this.ButtonHome.Text = "Tìm kiếm";
+      this.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.ButtonHome.UseVisualStyleBackColor = false;
       // 
       // PanelUser
       // 
@@ -174,15 +184,16 @@ namespace nJobee
       // 
       // Master
       // 
-      this.BackColor = global::nJobee.Properties.Settings.Default.BackColor;
+      this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
       this.ClientSize = new System.Drawing.Size(960, 540);
       this.Controls.Add(this.PanelLeft);
       this.Font = global::nJobee.Properties.Settings.Default.Font;
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "Master";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Form1";
+      this.Text = "n/Jobee";
       this.PanelLeft.ResumeLayout(false);
       this.PanelControl.ResumeLayout(false);
       this.PanelUser.ResumeLayout(false);
@@ -195,13 +206,14 @@ namespace nJobee
 
     private System.Windows.Forms.Panel PanelLeft;
     private System.Windows.Forms.Panel PanelControl;
-    private System.Windows.Forms.Button ButtonUser;
-    private System.Windows.Forms.Button ButtonActivity;
-    private System.Windows.Forms.Button ButtonFinding;
+    private System.Windows.Forms.Button ButtonAccount;
+    private System.Windows.Forms.Button ButtonActivities;
+    private System.Windows.Forms.Button ButtonHome;
     private System.Windows.Forms.Panel PanelUser;
     private System.Windows.Forms.Label LabelFullname;
     private System.Windows.Forms.PictureBox PicboxAvatar;
     private System.Windows.Forms.ImageList ImageControl;
+    private System.Windows.Forms.Panel PanelSlide;
   }
 }
 
