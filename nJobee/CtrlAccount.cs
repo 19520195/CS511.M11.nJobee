@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace nJobee
 {
-  public partial class UctrlUser : UserControl
+  public partial class CtrlAccount : UserControl
   {
-    public UctrlUser()
+    public CtrlAccount()
     {
       InitializeComponent();
       TextBoxName.Text = Properties.Settings.Default.Name;

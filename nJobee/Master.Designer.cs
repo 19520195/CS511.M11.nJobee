@@ -42,7 +42,7 @@ namespace nJobee
       this.LabelFullname = new System.Windows.Forms.Label();
       this.PicboxAvatar = new System.Windows.Forms.PictureBox();
       this.PanelRight = new System.Windows.Forms.Panel();
-      this.uctrlUser1 = new nJobee.UctrlUser();
+      this.uctrlUser1 = new nJobee.CtrlAccount();
       this.PanelLeft.SuspendLayout();
       this.PanelControl.SuspendLayout();
       this.PanelUser.SuspendLayout();
@@ -240,7 +240,7 @@ namespace nJobee
     private System.Windows.Forms.ImageList ImageControl;
     private System.Windows.Forms.Panel PanelSlide;
     private System.Windows.Forms.Panel PanelRight;
-    private UctrlUser uctrlUser1;
+    private CtrlAccount uctrlUser1;
   }
 }
 

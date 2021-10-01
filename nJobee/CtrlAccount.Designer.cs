@@ -1,7 +1,7 @@
 ﻿
 namespace nJobee
 {
-  partial class UctrlUser
+  partial class CtrlAccount
   {
     /// <summary> 
     /// Required designer variable.
