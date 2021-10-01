@@ -18,13 +18,18 @@ namespace nJobee
 
       // Binding selection for control buttons
       ButtonHome.Click += ChangeSelection; 
-      ButtonActivities.Click += ChangeSelection; 
-      ButtonAccount.Click += ChangeSelection; 
+      ButtonActivities.Click += ChangeSelection;
+      ButtonAccount.Click += ChangeSelection;
     }
 
     private void ChangeSelection(object sender, EventArgs e)
-    {
+    { 
       PanelSlide.Location = ((Control)sender).Location;
+    }
+
+    private void ButtonAccount_Click(object sender, EventArgs e)
+    {
+      uctrlUser1.Show();
     }
   }
 }

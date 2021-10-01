@@ -41,10 +41,13 @@ namespace nJobee
       this.PanelUser = new System.Windows.Forms.Panel();
       this.LabelFullname = new System.Windows.Forms.Label();
       this.PicboxAvatar = new System.Windows.Forms.PictureBox();
+      this.PanelRight = new System.Windows.Forms.Panel();
+      this.uctrlUser1 = new nJobee.UctrlUser();
       this.PanelLeft.SuspendLayout();
       this.PanelControl.SuspendLayout();
       this.PanelUser.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.PicboxAvatar)).BeginInit();
+      this.PanelRight.SuspendLayout();
       this.SuspendLayout();
       // 
       // PanelLeft
@@ -98,6 +101,7 @@ namespace nJobee
       this.ButtonAccount.Text = "Tài khoản";
       this.ButtonAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.ButtonAccount.UseVisualStyleBackColor = false;
+      this.ButtonAccount.Click += new System.EventHandler(this.ButtonAccount_Click);
       // 
       // ImageControl
       // 
@@ -182,10 +186,30 @@ namespace nJobee
       this.PicboxAvatar.TabIndex = 0;
       this.PicboxAvatar.TabStop = false;
       // 
+      // PanelRight
+      // 
+      this.PanelRight.Controls.Add(this.uctrlUser1);
+      this.PanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.PanelRight.Location = new System.Drawing.Point(240, 0);
+      this.PanelRight.Name = "PanelRight";
+      this.PanelRight.Size = new System.Drawing.Size(720, 540);
+      this.PanelRight.TabIndex = 1;
+      // 
+      // uctrlUser1
+      // 
+      this.uctrlUser1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
+      this.uctrlUser1.Font = new System.Drawing.Font("Montserrat", 14.25F);
+      this.uctrlUser1.Location = new System.Drawing.Point(0, 0);
+      this.uctrlUser1.Name = "uctrlUser1";
+      this.uctrlUser1.Size = new System.Drawing.Size(720, 540);
+      this.uctrlUser1.TabIndex = 0;
+      this.uctrlUser1.Visible = false;
+      // 
       // Master
       // 
       this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
       this.ClientSize = new System.Drawing.Size(960, 540);
+      this.Controls.Add(this.PanelRight);
       this.Controls.Add(this.PanelLeft);
       this.Font = global::nJobee.Properties.Settings.Default.Font;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -198,6 +222,7 @@ namespace nJobee
       this.PanelControl.ResumeLayout(false);
       this.PanelUser.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.PicboxAvatar)).EndInit();
+      this.PanelRight.ResumeLayout(false);
       this.ResumeLayout(false);
 
     }
@@ -214,6 +239,8 @@ namespace nJobee
     private System.Windows.Forms.PictureBox PicboxAvatar;
     private System.Windows.Forms.ImageList ImageControl;
     private System.Windows.Forms.Panel PanelSlide;
+    private System.Windows.Forms.Panel PanelRight;
+    private UctrlUser uctrlUser1;
   }
 }
 
