@@ -42,7 +42,9 @@ namespace nJobee
       this.LabelFullname = new System.Windows.Forms.Label();
       this.PicboxAvatar = new System.Windows.Forms.PictureBox();
       this.PanelRight = new System.Windows.Forms.Panel();
-      this.uctrlUser1 = new nJobee.CtrlAccount();
+      this.UCtrlHome = new nJobee.CtrlHome();
+      this.UCtrlActivities = new nJobee.CtrlActivities();
+      this.UCtrlAccount = new nJobee.CtrlAccount();
       this.PanelLeft.SuspendLayout();
       this.PanelControl.SuspendLayout();
       this.PanelUser.SuspendLayout();
@@ -131,6 +133,7 @@ namespace nJobee
       this.ButtonActivities.Text = "Hoạt động";
       this.ButtonActivities.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.ButtonActivities.UseVisualStyleBackColor = false;
+      this.ButtonActivities.Click += new System.EventHandler(this.ButtonActivities_Click);
       // 
       // ButtonHome
       // 
@@ -151,6 +154,7 @@ namespace nJobee
       this.ButtonHome.Text = "Tìm kiếm";
       this.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.ButtonHome.UseVisualStyleBackColor = false;
+      this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
       // 
       // PanelUser
       // 
@@ -188,22 +192,42 @@ namespace nJobee
       // 
       // PanelRight
       // 
-      this.PanelRight.Controls.Add(this.uctrlUser1);
+      this.PanelRight.Controls.Add(this.UCtrlHome);
+      this.PanelRight.Controls.Add(this.UCtrlActivities);
+      this.PanelRight.Controls.Add(this.UCtrlAccount);
       this.PanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
       this.PanelRight.Location = new System.Drawing.Point(240, 0);
       this.PanelRight.Name = "PanelRight";
       this.PanelRight.Size = new System.Drawing.Size(720, 540);
       this.PanelRight.TabIndex = 1;
       // 
-      // uctrlUser1
+      // UCtrlHome
       // 
-      this.uctrlUser1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
-      this.uctrlUser1.Font = new System.Drawing.Font("Montserrat", 14.25F);
-      this.uctrlUser1.Location = new System.Drawing.Point(0, 0);
-      this.uctrlUser1.Name = "uctrlUser1";
-      this.uctrlUser1.Size = new System.Drawing.Size(720, 540);
-      this.uctrlUser1.TabIndex = 0;
-      this.uctrlUser1.Visible = false;
+      this.UCtrlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
+      this.UCtrlHome.Font = new System.Drawing.Font("Montserrat", 14.25F);
+      this.UCtrlHome.Location = new System.Drawing.Point(0, 0);
+      this.UCtrlHome.Name = "UCtrlHome";
+      this.UCtrlHome.Size = new System.Drawing.Size(720, 540);
+      this.UCtrlHome.TabIndex = 0;
+      // 
+      // UCtrlActivities
+      // 
+      this.UCtrlActivities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
+      this.UCtrlActivities.Font = new System.Drawing.Font("Montserrat", 14.25F);
+      this.UCtrlActivities.Location = new System.Drawing.Point(0, 0);
+      this.UCtrlActivities.Name = "UCtrlActivities";
+      this.UCtrlActivities.Size = new System.Drawing.Size(720, 540);
+      this.UCtrlActivities.TabIndex = 1;
+      // 
+      // UCtrlAccount
+      // 
+      this.UCtrlAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
+      this.UCtrlAccount.Font = new System.Drawing.Font("Montserrat", 14.25F);
+      this.UCtrlAccount.Location = new System.Drawing.Point(0, 0);
+      this.UCtrlAccount.Name = "UCtrlAccount";
+      this.UCtrlAccount.Size = new System.Drawing.Size(720, 540);
+      this.UCtrlAccount.TabIndex = 0;
+      this.UCtrlAccount.Visible = false;
       // 
       // Master
       // 
@@ -240,7 +264,9 @@ namespace nJobee
     private System.Windows.Forms.ImageList ImageControl;
     private System.Windows.Forms.Panel PanelSlide;
     private System.Windows.Forms.Panel PanelRight;
-    private CtrlAccount uctrlUser1;
+    private CtrlAccount UCtrlAccount;
+    private CtrlActivities UCtrlActivities;
+    private CtrlHome UCtrlHome;
   }
 }
 

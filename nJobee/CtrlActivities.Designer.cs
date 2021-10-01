@@ -33,10 +33,9 @@ namespace nJobee
       // 
       // CtrlActivities
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
       this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
       this.Font = global::nJobee.Properties.Settings.Default.Font;
-      this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+      this.Margin = new System.Windows.Forms.Padding(6);
       this.Name = "CtrlActivities";
       this.Size = new System.Drawing.Size(720, 540);
       this.ResumeLayout(false);

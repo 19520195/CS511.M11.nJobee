@@ -27,9 +27,27 @@ namespace nJobee
       PanelSlide.Location = ((Control)sender).Location;
     }
 
+    private void ShowUserControls(UserControl control)
+    {
+      UCtrlHome.Hide();
+      UCtrlActivities.Hide();
+      UCtrlAccount.Hide();
+      control.Show(); 
+    }
+
     private void ButtonAccount_Click(object sender, EventArgs e)
     {
-      uctrlUser1.Show();
+      ShowUserControls(UCtrlAccount);
+    }
+
+    private void ButtonHome_Click(object sender, EventArgs e)
+    {
+      ShowUserControls(UCtrlHome);
+    }
+
+    private void ButtonActivities_Click(object sender, EventArgs e)
+    {
+      ShowUserControls(UCtrlActivities);
     }
   }
 }
