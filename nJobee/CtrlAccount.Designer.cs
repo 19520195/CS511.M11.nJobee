@@ -29,32 +29,20 @@ namespace nJobee
     /// </summary>
     private void InitializeComponent()
     {
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.TextBoxName = new System.Windows.Forms.TextBox();
       this.TextBoxEmail = new System.Windows.Forms.TextBox();
-      this.label1 = new System.Windows.Forms.Label();
-      this.label2 = new System.Windows.Forms.Label();
-      this.label3 = new System.Windows.Forms.Label();
+      this.LabelName = new System.Windows.Forms.Label();
+      this.LabelEmail = new System.Windows.Forms.Label();
+      this.LabelPhone = new System.Windows.Forms.Label();
       this.TextBoxPhone = new System.Windows.Forms.TextBox();
       this.ButtonSave = new System.Windows.Forms.Button();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.panel1 = new System.Windows.Forms.Panel();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      this.PicboxAvatar = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel1.SuspendLayout();
       this.panel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.PicboxAvatar)).BeginInit();
       this.SuspendLayout();
-      // 
-      // pictureBox1
-      // 
-      this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.pictureBox1.Image = global::nJobee.Properties.Resources.DefaultAvatar;
-      this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-      this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(656, 134);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-      this.pictureBox1.TabIndex = 0;
-      this.pictureBox1.TabStop = false;
       // 
       // TextBoxName
       // 
@@ -76,38 +64,38 @@ namespace nJobee
       this.TextBoxEmail.Size = new System.Drawing.Size(364, 31);
       this.TextBoxEmail.TabIndex = 1;
       // 
-      // label1
+      // LabelName
       // 
-      this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-      this.label1.Location = new System.Drawing.Point(4, 4);
-      this.label1.Margin = new System.Windows.Forms.Padding(4);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(216, 31);
-      this.label1.TabIndex = 2;
-      this.label1.Text = "Tên người dùng";
-      this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.LabelName.Dock = System.Windows.Forms.DockStyle.Top;
+      this.LabelName.Location = new System.Drawing.Point(4, 4);
+      this.LabelName.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelName.Name = "LabelName";
+      this.LabelName.Size = new System.Drawing.Size(216, 31);
+      this.LabelName.TabIndex = 2;
+      this.LabelName.Text = "Tên người dùng";
+      this.LabelName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
-      // label2
+      // LabelEmail
       // 
-      this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-      this.label2.Location = new System.Drawing.Point(4, 65);
-      this.label2.Margin = new System.Windows.Forms.Padding(4);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(216, 31);
-      this.label2.TabIndex = 2;
-      this.label2.Text = "Địa chỉ mail";
-      this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.LabelEmail.Dock = System.Windows.Forms.DockStyle.Top;
+      this.LabelEmail.Location = new System.Drawing.Point(4, 65);
+      this.LabelEmail.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelEmail.Name = "LabelEmail";
+      this.LabelEmail.Size = new System.Drawing.Size(216, 31);
+      this.LabelEmail.TabIndex = 2;
+      this.LabelEmail.Text = "Địa chỉ mail";
+      this.LabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
-      // label3
+      // LabelPhone
       // 
-      this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-      this.label3.Location = new System.Drawing.Point(4, 126);
-      this.label3.Margin = new System.Windows.Forms.Padding(4);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(216, 25);
-      this.label3.TabIndex = 2;
-      this.label3.Text = "Số điện thoại";
-      this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.LabelPhone.Dock = System.Windows.Forms.DockStyle.Top;
+      this.LabelPhone.Location = new System.Drawing.Point(4, 126);
+      this.LabelPhone.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelPhone.Name = "LabelPhone";
+      this.LabelPhone.Size = new System.Drawing.Size(216, 25);
+      this.LabelPhone.TabIndex = 2;
+      this.LabelPhone.Text = "Số điện thoại";
+      this.LabelPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
       // TextBoxPhone
       // 
@@ -138,11 +126,11 @@ namespace nJobee
       this.tableLayoutPanel1.ColumnCount = 2;
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.29878F));
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.70122F));
-      this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-      this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+      this.tableLayoutPanel1.Controls.Add(this.LabelName, 0, 0);
+      this.tableLayoutPanel1.Controls.Add(this.LabelEmail, 0, 1);
       this.tableLayoutPanel1.Controls.Add(this.TextBoxPhone, 1, 2);
       this.tableLayoutPanel1.Controls.Add(this.TextBoxEmail, 1, 1);
-      this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+      this.tableLayoutPanel1.Controls.Add(this.LabelPhone, 0, 2);
       this.tableLayoutPanel1.Controls.Add(this.TextBoxName, 1, 0);
       this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 230);
       this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(32, 16, 32, 16);
@@ -156,12 +144,24 @@ namespace nJobee
       // 
       // panel1
       // 
-      this.panel1.Controls.Add(this.pictureBox1);
+      this.panel1.Controls.Add(this.PicboxAvatar);
       this.panel1.Location = new System.Drawing.Point(32, 64);
       this.panel1.Margin = new System.Windows.Forms.Padding(16, 64, 16, 16);
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(656, 134);
       this.panel1.TabIndex = 5;
+      // 
+      // PicboxAvatar
+      // 
+      this.PicboxAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.PicboxAvatar.Image = global::nJobee.Properties.Resources.DefaultAvatar;
+      this.PicboxAvatar.Location = new System.Drawing.Point(0, 0);
+      this.PicboxAvatar.Margin = new System.Windows.Forms.Padding(4);
+      this.PicboxAvatar.Name = "PicboxAvatar";
+      this.PicboxAvatar.Size = new System.Drawing.Size(656, 134);
+      this.PicboxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+      this.PicboxAvatar.TabIndex = 0;
+      this.PicboxAvatar.TabStop = false;
       // 
       // CtrlAccount
       // 
@@ -172,22 +172,22 @@ namespace nJobee
       this.Font = global::nJobee.Properties.Settings.Default.Font;
       this.Name = "CtrlAccount";
       this.Size = new System.Drawing.Size(720, 540);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.tableLayoutPanel1.ResumeLayout(false);
       this.tableLayoutPanel1.PerformLayout();
       this.panel1.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.PicboxAvatar)).EndInit();
       this.ResumeLayout(false);
 
     }
 
     #endregion
 
-    private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox PicboxAvatar;
     private System.Windows.Forms.TextBox TextBoxName;
     private System.Windows.Forms.TextBox TextBoxEmail;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label LabelName;
+    private System.Windows.Forms.Label LabelEmail;
+    private System.Windows.Forms.Label LabelPhone;
     private System.Windows.Forms.Button ButtonSave;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     private System.Windows.Forms.TextBox TextBoxPhone;
