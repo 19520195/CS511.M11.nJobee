@@ -64,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CtrlActivities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlActivities.Designer.cs">
+      <DependentUpon>CtrlActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlHome.Designer.cs">
+      <DependentUpon>CtrlHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     <Compile Include="CtrlAccount.Designer.cs">
       <DependentUpon>CtrlAccount.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CtrlActivities.resx">
+      <DependentUpon>CtrlActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlHome.resx">
+      <DependentUpon>CtrlHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master.resx">
       <DependentUpon>Master.cs</DependentUpon>
     </EmbeddedResource>

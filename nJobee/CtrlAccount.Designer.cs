@@ -60,20 +60,20 @@ namespace nJobee
       // 
       this.TextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.TextBoxName.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.TextBoxName.Location = new System.Drawing.Point(229, 4);
+      this.TextBoxName.Location = new System.Drawing.Point(228, 4);
       this.TextBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 64, 4);
       this.TextBoxName.Name = "TextBoxName";
-      this.TextBoxName.Size = new System.Drawing.Size(363, 31);
+      this.TextBoxName.Size = new System.Drawing.Size(364, 31);
       this.TextBoxName.TabIndex = 0;
       // 
       // TextBoxEmail
       // 
       this.TextBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.TextBoxEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.TextBoxEmail.Location = new System.Drawing.Point(229, 64);
+      this.TextBoxEmail.Location = new System.Drawing.Point(228, 65);
       this.TextBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 64, 4);
       this.TextBoxEmail.Name = "TextBoxEmail";
-      this.TextBoxEmail.Size = new System.Drawing.Size(363, 31);
+      this.TextBoxEmail.Size = new System.Drawing.Size(364, 31);
       this.TextBoxEmail.TabIndex = 1;
       // 
       // label1
@@ -82,7 +82,7 @@ namespace nJobee
       this.label1.Location = new System.Drawing.Point(4, 4);
       this.label1.Margin = new System.Windows.Forms.Padding(4);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(217, 31);
+      this.label1.Size = new System.Drawing.Size(216, 31);
       this.label1.TabIndex = 2;
       this.label1.Text = "Tên người dùng";
       this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -90,10 +90,10 @@ namespace nJobee
       // label2
       // 
       this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-      this.label2.Location = new System.Drawing.Point(4, 64);
+      this.label2.Location = new System.Drawing.Point(4, 65);
       this.label2.Margin = new System.Windows.Forms.Padding(4);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(217, 31);
+      this.label2.Size = new System.Drawing.Size(216, 31);
       this.label2.TabIndex = 2;
       this.label2.Text = "Địa chỉ mail";
       this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,10 +101,10 @@ namespace nJobee
       // label3
       // 
       this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-      this.label3.Location = new System.Drawing.Point(4, 124);
+      this.label3.Location = new System.Drawing.Point(4, 126);
       this.label3.Margin = new System.Windows.Forms.Padding(4);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(217, 25);
+      this.label3.Size = new System.Drawing.Size(216, 25);
       this.label3.TabIndex = 2;
       this.label3.Text = "Số điện thoại";
       this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,10 +113,10 @@ namespace nJobee
       // 
       this.TextBoxPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.TextBoxPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.TextBoxPhone.Location = new System.Drawing.Point(229, 124);
+      this.TextBoxPhone.Location = new System.Drawing.Point(228, 126);
       this.TextBoxPhone.Margin = new System.Windows.Forms.Padding(4, 4, 64, 4);
       this.TextBoxPhone.Name = "TextBoxPhone";
-      this.TextBoxPhone.Size = new System.Drawing.Size(363, 31);
+      this.TextBoxPhone.Size = new System.Drawing.Size(364, 31);
       this.TextBoxPhone.TabIndex = 2;
       // 
       // ButtonSave
@@ -163,14 +163,14 @@ namespace nJobee
       this.panel1.Size = new System.Drawing.Size(656, 134);
       this.panel1.TabIndex = 5;
       // 
-      // UctrlUser
+      // CtrlAccount
       // 
       this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
       this.Controls.Add(this.panel1);
       this.Controls.Add(this.tableLayoutPanel1);
       this.Controls.Add(this.ButtonSave);
       this.Font = global::nJobee.Properties.Settings.Default.Font;
-      this.Name = "UctrlUser";
+      this.Name = "CtrlAccount";
       this.Size = new System.Drawing.Size(720, 540);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.tableLayoutPanel1.ResumeLayout(false);
