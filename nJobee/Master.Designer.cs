@@ -43,6 +43,7 @@ namespace nJobee
       this.ButtonActivities = new System.Windows.Forms.Button();
       this.ButtonHome = new System.Windows.Forms.Button();
       this.PicboxAvatar = new System.Windows.Forms.PictureBox();
+      this.ButtonSettings = new System.Windows.Forms.Button();
       this.UCtrlHome = new nJobee.CtrlHome();
       this.UCtrlActivities = new nJobee.CtrlActivities();
       this.UCtrlAccount = new nJobee.CtrlAccount();
@@ -72,6 +73,7 @@ namespace nJobee
       this.PanelControl.Controls.Add(this.ButtonAccount);
       this.PanelControl.Controls.Add(this.ButtonActivities);
       this.PanelControl.Controls.Add(this.ButtonHome);
+      this.PanelControl.Controls.Add(this.ButtonSettings);
       this.PanelControl.Dock = System.Windows.Forms.DockStyle.Fill;
       this.PanelControl.Location = new System.Drawing.Point(0, 165);
       this.PanelControl.Margin = new System.Windows.Forms.Padding(0);
@@ -137,7 +139,7 @@ namespace nJobee
       this.PicboxBack.Dock = System.Windows.Forms.DockStyle.Fill;
       this.PicboxBack.Location = new System.Drawing.Point(0, 144);
       this.PicboxBack.Name = "PicboxBack";
-      this.PicboxBack.Size = new System.Drawing.Size(240, 231);
+      this.PicboxBack.Size = new System.Drawing.Size(240, 183);
       this.PicboxBack.TabIndex = 6;
       this.PicboxBack.TabStop = false;
       // 
@@ -215,6 +217,27 @@ namespace nJobee
       this.PicboxAvatar.TabIndex = 0;
       this.PicboxAvatar.TabStop = false;
       // 
+      // ButtonSettings
+      // 
+      this.ButtonSettings.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
+      this.ButtonSettings.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+      this.ButtonSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+      this.ButtonSettings.FlatAppearance.BorderSize = 0;
+      this.ButtonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.ButtonSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.ButtonSettings.ImageIndex = 2;
+      this.ButtonSettings.ImageList = this.ImageControl;
+      this.ButtonSettings.Location = new System.Drawing.Point(0, 327);
+      this.ButtonSettings.Margin = new System.Windows.Forms.Padding(0);
+      this.ButtonSettings.Name = "ButtonSettings";
+      this.ButtonSettings.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
+      this.ButtonSettings.Size = new System.Drawing.Size(240, 48);
+      this.ButtonSettings.TabIndex = 7;
+      this.ButtonSettings.Text = "Cài đặt";
+      this.ButtonSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.ButtonSettings.UseVisualStyleBackColor = false;
+      this.ButtonSettings.Click += new System.EventHandler(this.ButtonSettings_Click);
+      // 
       // UCtrlHome
       // 
       this.UCtrlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
@@ -285,6 +308,7 @@ namespace nJobee
     private CtrlActivities UCtrlActivities;
     private CtrlHome UCtrlHome;
     private System.Windows.Forms.PictureBox PicboxBack;
+    private System.Windows.Forms.Button ButtonSettings;
   }
 }
 
