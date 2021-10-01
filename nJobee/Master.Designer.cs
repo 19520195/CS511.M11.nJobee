@@ -215,6 +215,7 @@ namespace nJobee
       this.UCtrlActivities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(217)))), ((int)(((byte)(120)))));
       this.UCtrlActivities.Font = new System.Drawing.Font("Montserrat", 14.25F);
       this.UCtrlActivities.Location = new System.Drawing.Point(0, 0);
+      this.UCtrlActivities.Margin = new System.Windows.Forms.Padding(6);
       this.UCtrlActivities.Name = "UCtrlActivities";
       this.UCtrlActivities.Size = new System.Drawing.Size(720, 540);
       this.UCtrlActivities.TabIndex = 1;
@@ -242,6 +243,7 @@ namespace nJobee
       this.Name = "Master";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "n/Jobee";
+      this.Load += new System.EventHandler(this.Master_Load);
       this.PanelLeft.ResumeLayout(false);
       this.PanelControl.ResumeLayout(false);
       this.PanelUser.ResumeLayout(false);

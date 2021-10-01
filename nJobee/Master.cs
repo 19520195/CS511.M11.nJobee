@@ -35,11 +35,6 @@ namespace nJobee
       control.Show(); 
     }
 
-    private void ButtonAccount_Click(object sender, EventArgs e)
-    {
-      ShowUserControls(UCtrlAccount);
-    }
-
     private void ButtonHome_Click(object sender, EventArgs e)
     {
       ShowUserControls(UCtrlHome);
@@ -48,6 +43,16 @@ namespace nJobee
     private void ButtonActivities_Click(object sender, EventArgs e)
     {
       ShowUserControls(UCtrlActivities);
+    }
+
+    private void ButtonAccount_Click(object sender, EventArgs e)
+    {
+      ShowUserControls(UCtrlAccount);
+    }
+
+    private void Master_Load(object sender, EventArgs e)
+    {
+      ShowUserControls(UCtrlHome);
     }
   }
 }
