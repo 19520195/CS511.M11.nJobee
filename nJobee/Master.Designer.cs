@@ -33,26 +33,26 @@ namespace nJobee
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Master));
       this.PanelLeft = new System.Windows.Forms.Panel();
       this.PanelControl = new System.Windows.Forms.Panel();
-      this.PanelSlide = new System.Windows.Forms.Panel();
-      this.ImageControl = new System.Windows.Forms.ImageList(this.components);
-      this.PanelUser = new System.Windows.Forms.Panel();
-      this.LabelFullname = new System.Windows.Forms.Label();
-      this.PanelRight = new System.Windows.Forms.Panel();
       this.PicboxBack = new System.Windows.Forms.PictureBox();
+      this.PanelSlide = new System.Windows.Forms.Panel();
       this.ButtonAccount = new System.Windows.Forms.Button();
+      this.ImageControl = new System.Windows.Forms.ImageList(this.components);
       this.ButtonActivities = new System.Windows.Forms.Button();
       this.ButtonHome = new System.Windows.Forms.Button();
-      this.PicboxAvatar = new System.Windows.Forms.PictureBox();
       this.ButtonSettings = new System.Windows.Forms.Button();
+      this.PanelUser = new System.Windows.Forms.Panel();
+      this.LabelFullname = new System.Windows.Forms.Label();
+      this.PicboxAvatar = new System.Windows.Forms.PictureBox();
+      this.PanelRight = new System.Windows.Forms.Panel();
       this.UCtrlHome = new nJobee.CtrlHome();
       this.UCtrlActivities = new nJobee.CtrlActivities();
       this.UCtrlAccount = new nJobee.CtrlAccount();
       this.PanelLeft.SuspendLayout();
       this.PanelControl.SuspendLayout();
-      this.PanelUser.SuspendLayout();
-      this.PanelRight.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.PicboxBack)).BeginInit();
+      this.PanelUser.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.PicboxAvatar)).BeginInit();
+      this.PanelRight.SuspendLayout();
       this.SuspendLayout();
       // 
       // PanelLeft
@@ -81,57 +81,6 @@ namespace nJobee
       this.PanelControl.Size = new System.Drawing.Size(240, 375);
       this.PanelControl.TabIndex = 5;
       // 
-      // PanelSlide
-      // 
-      this.PanelSlide.BackColor = System.Drawing.Color.Black;
-      this.PanelSlide.Location = new System.Drawing.Point(0, 0);
-      this.PanelSlide.Name = "PanelSlide";
-      this.PanelSlide.Size = new System.Drawing.Size(4, 48);
-      this.PanelSlide.TabIndex = 1;
-      // 
-      // ImageControl
-      // 
-      this.ImageControl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageControl.ImageStream")));
-      this.ImageControl.TransparentColor = System.Drawing.Color.Transparent;
-      this.ImageControl.Images.SetKeyName(0, "Activities.png");
-      this.ImageControl.Images.SetKeyName(1, "Home.png");
-      this.ImageControl.Images.SetKeyName(2, "Settings.png");
-      this.ImageControl.Images.SetKeyName(3, "User.png");
-      // 
-      // PanelUser
-      // 
-      this.PanelUser.Controls.Add(this.LabelFullname);
-      this.PanelUser.Controls.Add(this.PicboxAvatar);
-      this.PanelUser.Dock = System.Windows.Forms.DockStyle.Top;
-      this.PanelUser.Location = new System.Drawing.Point(0, 0);
-      this.PanelUser.Margin = new System.Windows.Forms.Padding(0);
-      this.PanelUser.Name = "PanelUser";
-      this.PanelUser.Padding = new System.Windows.Forms.Padding(16);
-      this.PanelUser.Size = new System.Drawing.Size(240, 165);
-      this.PanelUser.TabIndex = 4;
-      // 
-      // LabelFullname
-      // 
-      this.LabelFullname.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::nJobee.Properties.Settings.Default, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-      this.LabelFullname.Dock = System.Windows.Forms.DockStyle.Top;
-      this.LabelFullname.Location = new System.Drawing.Point(16, 112);
-      this.LabelFullname.Name = "LabelFullname";
-      this.LabelFullname.Size = new System.Drawing.Size(208, 45);
-      this.LabelFullname.TabIndex = 2;
-      this.LabelFullname.Text = global::nJobee.Properties.Settings.Default.Name;
-      this.LabelFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      // 
-      // PanelRight
-      // 
-      this.PanelRight.Controls.Add(this.UCtrlHome);
-      this.PanelRight.Controls.Add(this.UCtrlActivities);
-      this.PanelRight.Controls.Add(this.UCtrlAccount);
-      this.PanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.PanelRight.Location = new System.Drawing.Point(240, 0);
-      this.PanelRight.Name = "PanelRight";
-      this.PanelRight.Size = new System.Drawing.Size(720, 540);
-      this.PanelRight.TabIndex = 1;
-      // 
       // PicboxBack
       // 
       this.PicboxBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PicboxBack.BackgroundImage")));
@@ -142,6 +91,14 @@ namespace nJobee
       this.PicboxBack.Size = new System.Drawing.Size(240, 183);
       this.PicboxBack.TabIndex = 6;
       this.PicboxBack.TabStop = false;
+      // 
+      // PanelSlide
+      // 
+      this.PanelSlide.BackColor = System.Drawing.Color.Black;
+      this.PanelSlide.Location = new System.Drawing.Point(0, 0);
+      this.PanelSlide.Name = "PanelSlide";
+      this.PanelSlide.Size = new System.Drawing.Size(4, 48);
+      this.PanelSlide.TabIndex = 1;
       // 
       // ButtonAccount
       // 
@@ -163,6 +120,15 @@ namespace nJobee
       this.ButtonAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.ButtonAccount.UseVisualStyleBackColor = false;
       this.ButtonAccount.Click += new System.EventHandler(this.ButtonAccount_Click);
+      // 
+      // ImageControl
+      // 
+      this.ImageControl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageControl.ImageStream")));
+      this.ImageControl.TransparentColor = System.Drawing.Color.Transparent;
+      this.ImageControl.Images.SetKeyName(0, "Activities.png");
+      this.ImageControl.Images.SetKeyName(1, "Home.png");
+      this.ImageControl.Images.SetKeyName(2, "Settings.png");
+      this.ImageControl.Images.SetKeyName(3, "User.png");
       // 
       // ButtonActivities
       // 
@@ -206,17 +172,6 @@ namespace nJobee
       this.ButtonHome.UseVisualStyleBackColor = false;
       this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
       // 
-      // PicboxAvatar
-      // 
-      this.PicboxAvatar.Dock = System.Windows.Forms.DockStyle.Top;
-      this.PicboxAvatar.Image = global::nJobee.Properties.Resources.DefaultAvatar;
-      this.PicboxAvatar.Location = new System.Drawing.Point(16, 16);
-      this.PicboxAvatar.Name = "PicboxAvatar";
-      this.PicboxAvatar.Size = new System.Drawing.Size(208, 96);
-      this.PicboxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-      this.PicboxAvatar.TabIndex = 0;
-      this.PicboxAvatar.TabStop = false;
-      // 
       // ButtonSettings
       // 
       this.ButtonSettings.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
@@ -237,6 +192,51 @@ namespace nJobee
       this.ButtonSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.ButtonSettings.UseVisualStyleBackColor = false;
       this.ButtonSettings.Click += new System.EventHandler(this.ButtonSettings_Click);
+      // 
+      // PanelUser
+      // 
+      this.PanelUser.Controls.Add(this.LabelFullname);
+      this.PanelUser.Controls.Add(this.PicboxAvatar);
+      this.PanelUser.Dock = System.Windows.Forms.DockStyle.Top;
+      this.PanelUser.Location = new System.Drawing.Point(0, 0);
+      this.PanelUser.Margin = new System.Windows.Forms.Padding(0);
+      this.PanelUser.Name = "PanelUser";
+      this.PanelUser.Padding = new System.Windows.Forms.Padding(16);
+      this.PanelUser.Size = new System.Drawing.Size(240, 165);
+      this.PanelUser.TabIndex = 4;
+      // 
+      // LabelFullname
+      // 
+      this.LabelFullname.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::nJobee.Properties.Settings.Default, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+      this.LabelFullname.Dock = System.Windows.Forms.DockStyle.Top;
+      this.LabelFullname.Location = new System.Drawing.Point(16, 112);
+      this.LabelFullname.Name = "LabelFullname";
+      this.LabelFullname.Size = new System.Drawing.Size(208, 45);
+      this.LabelFullname.TabIndex = 2;
+      this.LabelFullname.Text = global::nJobee.Properties.Settings.Default.Name;
+      this.LabelFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
+      // PicboxAvatar
+      // 
+      this.PicboxAvatar.Dock = System.Windows.Forms.DockStyle.Top;
+      this.PicboxAvatar.Image = global::nJobee.Properties.Resources.DefaultAvatar;
+      this.PicboxAvatar.Location = new System.Drawing.Point(16, 16);
+      this.PicboxAvatar.Name = "PicboxAvatar";
+      this.PicboxAvatar.Size = new System.Drawing.Size(208, 96);
+      this.PicboxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+      this.PicboxAvatar.TabIndex = 0;
+      this.PicboxAvatar.TabStop = false;
+      // 
+      // PanelRight
+      // 
+      this.PanelRight.Controls.Add(this.UCtrlHome);
+      this.PanelRight.Controls.Add(this.UCtrlActivities);
+      this.PanelRight.Controls.Add(this.UCtrlAccount);
+      this.PanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.PanelRight.Location = new System.Drawing.Point(240, 0);
+      this.PanelRight.Name = "PanelRight";
+      this.PanelRight.Size = new System.Drawing.Size(720, 540);
+      this.PanelRight.TabIndex = 1;
       // 
       // UCtrlHome
       // 
@@ -274,6 +274,7 @@ namespace nJobee
       this.Controls.Add(this.PanelRight);
       this.Controls.Add(this.PanelLeft);
       this.Font = global::nJobee.Properties.Settings.Default.Font;
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MaximizeBox = false;
       this.MinimizeBox = false;
@@ -283,10 +284,10 @@ namespace nJobee
       this.Load += new System.EventHandler(this.Master_Load);
       this.PanelLeft.ResumeLayout(false);
       this.PanelControl.ResumeLayout(false);
-      this.PanelUser.ResumeLayout(false);
-      this.PanelRight.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.PicboxBack)).EndInit();
+      this.PanelUser.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.PicboxAvatar)).EndInit();
+      this.PanelRight.ResumeLayout(false);
       this.ResumeLayout(false);
 
     }
