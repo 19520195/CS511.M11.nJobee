@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nJobee.ico" />
+    <None Include="Resources\DefaultBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
