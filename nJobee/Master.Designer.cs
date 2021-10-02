@@ -36,7 +36,7 @@ namespace nJobee
       this.PicboxBack = new System.Windows.Forms.PictureBox();
       this.PanelSlide = new System.Windows.Forms.Panel();
       this.ButtonAccount = new System.Windows.Forms.Button();
-      this.ImageControl = new System.Windows.Forms.ImageList(this.components);
+      this.ImctrlControl = new System.Windows.Forms.ImageList(this.components);
       this.ButtonActivities = new System.Windows.Forms.Button();
       this.ButtonHome = new System.Windows.Forms.Button();
       this.ButtonSettings = new System.Windows.Forms.Button();
@@ -109,7 +109,7 @@ namespace nJobee
       this.ButtonAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.ButtonAccount.ImageIndex = 3;
-      this.ButtonAccount.ImageList = this.ImageControl;
+      this.ButtonAccount.ImageList = this.ImctrlControl;
       this.ButtonAccount.Location = new System.Drawing.Point(0, 96);
       this.ButtonAccount.Margin = new System.Windows.Forms.Padding(0);
       this.ButtonAccount.Name = "ButtonAccount";
@@ -121,14 +121,14 @@ namespace nJobee
       this.ButtonAccount.UseVisualStyleBackColor = false;
       this.ButtonAccount.Click += new System.EventHandler(this.ButtonAccount_Click);
       // 
-      // ImageControl
+      // ImctrlControl
       // 
-      this.ImageControl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageControl.ImageStream")));
-      this.ImageControl.TransparentColor = System.Drawing.Color.Transparent;
-      this.ImageControl.Images.SetKeyName(0, "Activities.png");
-      this.ImageControl.Images.SetKeyName(1, "Home.png");
-      this.ImageControl.Images.SetKeyName(2, "Settings.png");
-      this.ImageControl.Images.SetKeyName(3, "User.png");
+      this.ImctrlControl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImctrlControl.ImageStream")));
+      this.ImctrlControl.TransparentColor = System.Drawing.Color.Transparent;
+      this.ImctrlControl.Images.SetKeyName(0, "Activities.png");
+      this.ImctrlControl.Images.SetKeyName(1, "Home.png");
+      this.ImctrlControl.Images.SetKeyName(2, "Settings.png");
+      this.ImctrlControl.Images.SetKeyName(3, "User.png");
       // 
       // ButtonActivities
       // 
@@ -139,7 +139,7 @@ namespace nJobee
       this.ButtonActivities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonActivities.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.ButtonActivities.ImageIndex = 0;
-      this.ButtonActivities.ImageList = this.ImageControl;
+      this.ButtonActivities.ImageList = this.ImctrlControl;
       this.ButtonActivities.Location = new System.Drawing.Point(0, 48);
       this.ButtonActivities.Margin = new System.Windows.Forms.Padding(0);
       this.ButtonActivities.Name = "ButtonActivities";
@@ -160,7 +160,7 @@ namespace nJobee
       this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.ButtonHome.ImageIndex = 1;
-      this.ButtonHome.ImageList = this.ImageControl;
+      this.ButtonHome.ImageList = this.ImctrlControl;
       this.ButtonHome.Location = new System.Drawing.Point(0, 0);
       this.ButtonHome.Margin = new System.Windows.Forms.Padding(0);
       this.ButtonHome.Name = "ButtonHome";
@@ -177,11 +177,12 @@ namespace nJobee
       this.ButtonSettings.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
       this.ButtonSettings.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::nJobee.Properties.Settings.Default, "BackColorC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
       this.ButtonSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+      this.ButtonSettings.Enabled = false;
       this.ButtonSettings.FlatAppearance.BorderSize = 0;
       this.ButtonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.ButtonSettings.ImageIndex = 2;
-      this.ButtonSettings.ImageList = this.ImageControl;
+      this.ButtonSettings.ImageList = this.ImctrlControl;
       this.ButtonSettings.Location = new System.Drawing.Point(0, 327);
       this.ButtonSettings.Margin = new System.Windows.Forms.Padding(0);
       this.ButtonSettings.Name = "ButtonSettings";
@@ -302,7 +303,7 @@ namespace nJobee
     private System.Windows.Forms.Panel PanelUser;
     private System.Windows.Forms.Label LabelFullname;
     private System.Windows.Forms.PictureBox PicboxAvatar;
-    private System.Windows.Forms.ImageList ImageControl;
+    private System.Windows.Forms.ImageList ImctrlControl;
     private System.Windows.Forms.Panel PanelSlide;
     private System.Windows.Forms.Panel PanelRight;
     private CtrlAccount UCtrlAccount;
