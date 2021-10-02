@@ -85,6 +85,7 @@ namespace nJobee
       this.ButtonHomeCooking.Text = "Nấu Ăn";
       this.ButtonHomeCooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
       this.ButtonHomeCooking.UseVisualStyleBackColor = false;
+      this.ButtonHomeCooking.Click += new System.EventHandler(this.ButtonHomeCooking_Click);
       // 
       // ButtonLaudry
       // 

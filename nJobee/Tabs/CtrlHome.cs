@@ -32,6 +32,11 @@ namespace nJobee
       ShowDescriptor(new JobDescr.JobdGroceryAssistance());
     }
 
+    private void ButtonHomeCooking_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdCooking());
+    }
+
     private void ButtonCash_Click(object sender, EventArgs e)
     {
       DialogResult result = MessageBox.Show("Click vào OK để hoàn tất thanh toán", "Xác nhận Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
