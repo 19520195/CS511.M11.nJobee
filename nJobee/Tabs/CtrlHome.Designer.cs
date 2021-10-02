@@ -171,6 +171,7 @@ namespace nJobee
       this.ButtonGroceryAssistance.Text = "Đi Chợ";
       this.ButtonGroceryAssistance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
       this.ButtonGroceryAssistance.UseVisualStyleBackColor = false;
+      this.ButtonGroceryAssistance.Click += new System.EventHandler(this.ButtonGroceryAssistance_Click);
       // 
       // LabelCash
       // 
@@ -236,7 +237,6 @@ namespace nJobee
       this.LabelAddressValue.Name = "LabelAddressValue";
       this.LabelAddressValue.Size = new System.Drawing.Size(480, 35);
       this.LabelAddressValue.TabIndex = 7;
-      this.LabelAddressValue.Text = "Chưa xác định";
       this.LabelAddressValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // LabelTimeValue
@@ -247,7 +247,6 @@ namespace nJobee
       this.LabelTimeValue.Name = "LabelTimeValue";
       this.LabelTimeValue.Size = new System.Drawing.Size(480, 33);
       this.LabelTimeValue.TabIndex = 5;
-      this.LabelTimeValue.Text = "Chưa xác định";
       this.LabelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // LabelCashValue
@@ -258,7 +257,6 @@ namespace nJobee
       this.LabelCashValue.Name = "LabelCashValue";
       this.LabelCashValue.Size = new System.Drawing.Size(480, 33);
       this.LabelCashValue.TabIndex = 4;
-      this.LabelCashValue.Text = "0đ";
       this.LabelCashValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // LabelTime
@@ -281,6 +279,7 @@ namespace nJobee
       this.Font = global::nJobee.Properties.Settings.Default.Font;
       this.Name = "CtrlHome";
       this.Size = new System.Drawing.Size(720, 540);
+      this.Load += new System.EventHandler(this.CtrlHome_Load);
       this.TabpanelFunctions.ResumeLayout(false);
       this.TabpanelCash.ResumeLayout(false);
       this.ResumeLayout(false);

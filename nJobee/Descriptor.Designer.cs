@@ -39,6 +39,7 @@ namespace nJobee
       this.PickerDate = new System.Windows.Forms.DateTimePicker();
       this.PickerTime = new System.Windows.Forms.DateTimePicker();
       this.ButtonOK = new System.Windows.Forms.Button();
+      this.GrpboxDescription = new System.Windows.Forms.GroupBox();
       this.GrpboxAddress.SuspendLayout();
       this.GrpboxDateTime.SuspendLayout();
       this.SuspendLayout();
@@ -60,7 +61,7 @@ namespace nJobee
       this.GrpboxAddress.Controls.Add(this.ComboxProvince);
       this.GrpboxAddress.Controls.Add(this.ComboxDistrict);
       this.GrpboxAddress.Location = new System.Drawing.Point(25, 25);
-      this.GrpboxAddress.Margin = new System.Windows.Forms.Padding(16);
+      this.GrpboxAddress.Margin = new System.Windows.Forms.Padding(16, 16, 8, 16);
       this.GrpboxAddress.Name = "GrpboxAddress";
       this.GrpboxAddress.Size = new System.Drawing.Size(360, 240);
       this.GrpboxAddress.TabIndex = 2;
@@ -113,9 +114,10 @@ namespace nJobee
       // 
       this.GrpboxDateTime.Controls.Add(this.PickerDate);
       this.GrpboxDateTime.Controls.Add(this.PickerTime);
-      this.GrpboxDateTime.Location = new System.Drawing.Point(25, 284);
+      this.GrpboxDateTime.Location = new System.Drawing.Point(25, 289);
+      this.GrpboxDateTime.Margin = new System.Windows.Forms.Padding(16, 16, 8, 16);
       this.GrpboxDateTime.Name = "GrpboxDateTime";
-      this.GrpboxDateTime.Size = new System.Drawing.Size(360, 84);
+      this.GrpboxDateTime.Size = new System.Drawing.Size(360, 86);
       this.GrpboxDateTime.TabIndex = 3;
       this.GrpboxDateTime.TabStop = false;
       this.GrpboxDateTime.Text = "Thời gian";
@@ -145,14 +147,24 @@ namespace nJobee
       // 
       this.ButtonOK.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
       this.ButtonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.ButtonOK.Location = new System.Drawing.Point(396, 326);
-      this.ButtonOK.Margin = new System.Windows.Forms.Padding(8);
+      this.ButtonOK.Location = new System.Drawing.Point(401, 333);
+      this.ButtonOK.Margin = new System.Windows.Forms.Padding(16, 8, 16, 16);
       this.ButtonOK.Name = "ButtonOK";
-      this.ButtonOK.Size = new System.Drawing.Size(307, 42);
+      this.ButtonOK.Size = new System.Drawing.Size(294, 42);
       this.ButtonOK.TabIndex = 12;
       this.ButtonOK.Text = "Hoàn tất";
       this.ButtonOK.UseVisualStyleBackColor = false;
       this.ButtonOK.Click += new System.EventHandler(this.ButtonOK_Click);
+      // 
+      // GrpboxDescription
+      // 
+      this.GrpboxDescription.Location = new System.Drawing.Point(401, 25);
+      this.GrpboxDescription.Margin = new System.Windows.Forms.Padding(8, 16, 16, 8);
+      this.GrpboxDescription.Name = "GrpboxDescription";
+      this.GrpboxDescription.Size = new System.Drawing.Size(294, 292);
+      this.GrpboxDescription.TabIndex = 13;
+      this.GrpboxDescription.TabStop = false;
+      this.GrpboxDescription.Text = "Chi tiết";
       // 
       // Descriptor
       // 
@@ -160,6 +172,7 @@ namespace nJobee
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
       this.ClientSize = new System.Drawing.Size(720, 400);
+      this.Controls.Add(this.GrpboxDescription);
       this.Controls.Add(this.ButtonOK);
       this.Controls.Add(this.GrpboxDateTime);
       this.Controls.Add(this.GrpboxAddress);
@@ -190,5 +203,6 @@ namespace nJobee
     private System.Windows.Forms.DateTimePicker PickerTime;
     private System.Windows.Forms.DateTimePicker PickerDate;
     private System.Windows.Forms.Button ButtonOK;
+    private System.Windows.Forms.GroupBox GrpboxDescription;
   }
 }

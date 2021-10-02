@@ -70,6 +70,21 @@
     <Compile Include="Descriptor.Designer.cs">
       <DependentUpon>Descriptor.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobDescr\IJobd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdCleaning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdCleaning.Designer.cs">
+      <DependentUpon>JobdCleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\JobdGroceryAssistance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdGroceryAssistance.Designer.cs">
+      <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\CtrlActivities.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +113,12 @@
     </Compile>
     <EmbeddedResource Include="Descriptor.resx">
       <DependentUpon>Descriptor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdCleaning.resx">
+      <DependentUpon>JobdCleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdGroceryAssistance.resx">
+      <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\CtrlActivities.resx">
       <DependentUpon>CtrlActivities.cs</DependentUpon>

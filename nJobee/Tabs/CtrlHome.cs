@@ -17,15 +17,19 @@ namespace nJobee
       InitializeComponent();
     }
 
+    private void CtrlHome_Load(object sender, EventArgs e)
+    {
+      ResetCashState(); 
+    }
+
     private void ButtonCleaning_Click(object sender, EventArgs e)
     {
-      Descriptor descriptor = new Descriptor();
-      DialogResult result = descriptor.ShowDialog();
-      if (result == DialogResult.OK)
-      {
-        LabelTimeValue.Text = descriptor.GetTimeValue();
-        LabelAddressValue.Text = descriptor.GetAddressValue();
-      }
+      ShowDescriptor(new JobDescr.JobdCleaning());
+    }
+
+    private void ButtonGroceryAssistance_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdGroceryAssistance());
     }
 
     private void ButtonCash_Click(object sender, EventArgs e)
@@ -35,6 +39,28 @@ namespace nJobee
       {
         System.Diagnostics.Process.Start("http://google.com");
       }
+    }
+
+    private void ResetCashState()
+    {
+      LabelCashValue.Text = "0đ";
+      LabelTimeValue.Text = "Chưa xác định";
+      LabelAddressValue.Text = "Chưa xác định";
+    }
+
+    private void ShowDescriptor(JobDescr.IJobd Jobd)
+    {
+      Descriptor descriptor = new Descriptor();
+      descriptor.AddJobDescription(Jobd);
+
+      DialogResult result = descriptor.ShowDialog();
+      if (result == DialogResult.OK)
+      {
+        LabelCashValue.Text = descriptor.GetCashValue();
+        LabelTimeValue.Text = descriptor.GetTimeValue();
+        LabelAddressValue.Text = descriptor.GetAddressValue();
+      }
+      else ResetCashState();
     }
   }
 }

@@ -15,6 +15,7 @@ namespace nJobee
   public partial class Descriptor : Form
   {
     private DataTable AdministratorUnits;
+    private JobDescr.IJobd JobDescr; 
 
     public Descriptor()
     {
@@ -62,13 +63,25 @@ namespace nJobee
       Dispose();
     }
 
+    public void AddJobDescription(JobDescr.IJobd control)
+    {
+      JobDescr = control;
+      JobDescr.Dock = DockStyle.Fill;
+      GrpboxDescription.Controls.Add(JobDescr);
+    }
+
+    public string GetCashValue()
+    {
+      return JobDescr.GetCash().ToString("#,##0đ");
+    }
+
     public string GetTimeValue()
     {
       return String.Format("{0:00}:{1:00} - {2:00}:{3:00}",
         PickerTime.Value.Hour,
         PickerTime.Value.Minute,
-        PickerTime.Value.Hour + 1,
-        PickerTime.Value.Minute + 30);
+        PickerTime.Value.Hour + JobDescr.GetTime() / 60,
+        PickerTime.Value.Minute + JobDescr.GetTime() % 60);
     }
 
     public string GetAddressValue()
