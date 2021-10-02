@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Descriptor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Descriptor.Designer.cs">
+      <DependentUpon>Descriptor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\CtrlActivities.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Tabs\CtrlAccount.Designer.cs">
       <DependentUpon>CtrlAccount.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Descriptor.resx">
+      <DependentUpon>Descriptor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabs\CtrlActivities.resx">
       <DependentUpon>CtrlActivities.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\nJobee.ico" />
+    <None Include="Resources\Vietnam.xml" />
     <None Include="Resources\DefaultBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
