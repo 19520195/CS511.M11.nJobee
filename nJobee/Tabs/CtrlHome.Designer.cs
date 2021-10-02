@@ -39,11 +39,11 @@ namespace nJobee
       this.LabelCash = new System.Windows.Forms.Label();
       this.ButtonCash = new System.Windows.Forms.Button();
       this.TabpanelCash = new System.Windows.Forms.TableLayoutPanel();
+      this.LabelAddress = new System.Windows.Forms.Label();
+      this.LabelAddressValue = new System.Windows.Forms.Label();
       this.LabelTimeValue = new System.Windows.Forms.Label();
       this.LabelCashValue = new System.Windows.Forms.Label();
       this.LabelTime = new System.Windows.Forms.Label();
-      this.LabelAddress = new System.Windows.Forms.Label();
-      this.LabelAddressValue = new System.Windows.Forms.Label();
       this.TabpanelFunctions.SuspendLayout();
       this.TabpanelCash.SuspendLayout();
       this.SuspendLayout();
@@ -153,6 +153,7 @@ namespace nJobee
       this.ButtonCleaning.Text = "Tổng Vệ Sinh";
       this.ButtonCleaning.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
       this.ButtonCleaning.UseVisualStyleBackColor = false;
+      this.ButtonCleaning.Click += new System.EventHandler(this.ButtonCleaning_Click);
       // 
       // ButtonGroceryAssistance
       // 
@@ -180,19 +181,20 @@ namespace nJobee
       this.LabelCash.Size = new System.Drawing.Size(154, 33);
       this.LabelCash.TabIndex = 1;
       this.LabelCash.Text = "Tổng tiền";
-      this.LabelCash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.LabelCash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
       // ButtonCash
       // 
       this.ButtonCash.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
       this.ButtonCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.ButtonCash.Location = new System.Drawing.Point(502, 490);
+      this.ButtonCash.Location = new System.Drawing.Point(206, 474);
       this.ButtonCash.Margin = new System.Windows.Forms.Padding(8);
       this.ButtonCash.Name = "ButtonCash";
       this.ButtonCash.Size = new System.Drawing.Size(183, 42);
       this.ButtonCash.TabIndex = 11;
       this.ButtonCash.Text = "Thanh Toán";
       this.ButtonCash.UseVisualStyleBackColor = false;
+      this.ButtonCash.Click += new System.EventHandler(this.ButtonCash_Click);
       // 
       // TabpanelCash
       // 
@@ -215,39 +217,6 @@ namespace nJobee
       this.TabpanelCash.Size = new System.Drawing.Size(650, 125);
       this.TabpanelCash.TabIndex = 12;
       // 
-      // LabelTimeValue
-      // 
-      this.LabelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelTimeValue.Location = new System.Drawing.Point(166, 45);
-      this.LabelTimeValue.Margin = new System.Windows.Forms.Padding(4);
-      this.LabelTimeValue.Name = "LabelTimeValue";
-      this.LabelTimeValue.Size = new System.Drawing.Size(480, 33);
-      this.LabelTimeValue.TabIndex = 5;
-      this.LabelTimeValue.Text = "Chưa xác định";
-      this.LabelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      // 
-      // LabelCashValue
-      // 
-      this.LabelCashValue.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelCashValue.Location = new System.Drawing.Point(166, 4);
-      this.LabelCashValue.Margin = new System.Windows.Forms.Padding(4);
-      this.LabelCashValue.Name = "LabelCashValue";
-      this.LabelCashValue.Size = new System.Drawing.Size(480, 33);
-      this.LabelCashValue.TabIndex = 4;
-      this.LabelCashValue.Text = "0đ";
-      this.LabelCashValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      // 
-      // LabelTime
-      // 
-      this.LabelTime.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelTime.Location = new System.Drawing.Point(4, 45);
-      this.LabelTime.Margin = new System.Windows.Forms.Padding(4);
-      this.LabelTime.Name = "LabelTime";
-      this.LabelTime.Size = new System.Drawing.Size(154, 33);
-      this.LabelTime.TabIndex = 3;
-      this.LabelTime.Text = "Thời gian làm";
-      this.LabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      // 
       // LabelAddress
       // 
       this.LabelAddress.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -257,7 +226,7 @@ namespace nJobee
       this.LabelAddress.Size = new System.Drawing.Size(154, 35);
       this.LabelAddress.TabIndex = 6;
       this.LabelAddress.Text = "Địa chỉ";
-      this.LabelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.LabelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
       // LabelAddressValue
       // 
@@ -268,7 +237,40 @@ namespace nJobee
       this.LabelAddressValue.Size = new System.Drawing.Size(480, 35);
       this.LabelAddressValue.TabIndex = 7;
       this.LabelAddressValue.Text = "Chưa xác định";
-      this.LabelAddressValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.LabelAddressValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // LabelTimeValue
+      // 
+      this.LabelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelTimeValue.Location = new System.Drawing.Point(166, 45);
+      this.LabelTimeValue.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelTimeValue.Name = "LabelTimeValue";
+      this.LabelTimeValue.Size = new System.Drawing.Size(480, 33);
+      this.LabelTimeValue.TabIndex = 5;
+      this.LabelTimeValue.Text = "Chưa xác định";
+      this.LabelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // LabelCashValue
+      // 
+      this.LabelCashValue.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelCashValue.Location = new System.Drawing.Point(166, 4);
+      this.LabelCashValue.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelCashValue.Name = "LabelCashValue";
+      this.LabelCashValue.Size = new System.Drawing.Size(480, 33);
+      this.LabelCashValue.TabIndex = 4;
+      this.LabelCashValue.Text = "0đ";
+      this.LabelCashValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // LabelTime
+      // 
+      this.LabelTime.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelTime.Location = new System.Drawing.Point(4, 45);
+      this.LabelTime.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelTime.Name = "LabelTime";
+      this.LabelTime.Size = new System.Drawing.Size(154, 33);
+      this.LabelTime.TabIndex = 3;
+      this.LabelTime.Text = "Thời gian làm";
+      this.LabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
       // CtrlHome
       // 

@@ -29,14 +29,16 @@ namespace nJobee
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Descriptor));
       this.ComboxAddress = new System.Windows.Forms.TextBox();
       this.GrpboxAddress = new System.Windows.Forms.GroupBox();
       this.ComboxWard = new System.Windows.Forms.ComboBox();
       this.ComboxProvince = new System.Windows.Forms.ComboBox();
       this.ComboxDistrict = new System.Windows.Forms.ComboBox();
       this.GrpboxDateTime = new System.Windows.Forms.GroupBox();
-      this.PickerTime = new System.Windows.Forms.DateTimePicker();
       this.PickerDate = new System.Windows.Forms.DateTimePicker();
+      this.PickerTime = new System.Windows.Forms.DateTimePicker();
+      this.ButtonOK = new System.Windows.Forms.Button();
       this.GrpboxAddress.SuspendLayout();
       this.GrpboxDateTime.SuspendLayout();
       this.SuspendLayout();
@@ -48,7 +50,7 @@ namespace nJobee
       this.ComboxAddress.Location = new System.Drawing.Point(11, 185);
       this.ComboxAddress.Margin = new System.Windows.Forms.Padding(8);
       this.ComboxAddress.Name = "ComboxAddress";
-      this.ComboxAddress.Size = new System.Drawing.Size(398, 31);
+      this.ComboxAddress.Size = new System.Drawing.Size(338, 31);
       this.ComboxAddress.TabIndex = 3;
       // 
       // GrpboxAddress
@@ -60,7 +62,7 @@ namespace nJobee
       this.GrpboxAddress.Location = new System.Drawing.Point(25, 25);
       this.GrpboxAddress.Margin = new System.Windows.Forms.Padding(16);
       this.GrpboxAddress.Name = "GrpboxAddress";
-      this.GrpboxAddress.Size = new System.Drawing.Size(420, 240);
+      this.GrpboxAddress.Size = new System.Drawing.Size(360, 240);
       this.GrpboxAddress.TabIndex = 2;
       this.GrpboxAddress.TabStop = false;
       this.GrpboxAddress.Text = "Địa chỉ";
@@ -75,7 +77,7 @@ namespace nJobee
       this.ComboxWard.Location = new System.Drawing.Point(11, 135);
       this.ComboxWard.Margin = new System.Windows.Forms.Padding(8);
       this.ComboxWard.Name = "ComboxWard";
-      this.ComboxWard.Size = new System.Drawing.Size(398, 34);
+      this.ComboxWard.Size = new System.Drawing.Size(338, 34);
       this.ComboxWard.TabIndex = 2;
       // 
       // ComboxProvince
@@ -88,7 +90,7 @@ namespace nJobee
       this.ComboxProvince.Location = new System.Drawing.Point(11, 35);
       this.ComboxProvince.Margin = new System.Windows.Forms.Padding(8);
       this.ComboxProvince.Name = "ComboxProvince";
-      this.ComboxProvince.Size = new System.Drawing.Size(398, 34);
+      this.ComboxProvince.Size = new System.Drawing.Size(338, 34);
       this.ComboxProvince.Sorted = true;
       this.ComboxProvince.TabIndex = 0;
       this.ComboxProvince.SelectedIndexChanged += new System.EventHandler(this.ComboxProvince_SelectedIndexChanged);
@@ -103,7 +105,7 @@ namespace nJobee
       this.ComboxDistrict.Location = new System.Drawing.Point(11, 85);
       this.ComboxDistrict.Margin = new System.Windows.Forms.Padding(8);
       this.ComboxDistrict.Name = "ComboxDistrict";
-      this.ComboxDistrict.Size = new System.Drawing.Size(398, 34);
+      this.ComboxDistrict.Size = new System.Drawing.Size(338, 34);
       this.ComboxDistrict.TabIndex = 1;
       this.ComboxDistrict.SelectedIndexChanged += new System.EventHandler(this.ComboxDistrict_SelectedIndexChanged);
       // 
@@ -113,21 +115,10 @@ namespace nJobee
       this.GrpboxDateTime.Controls.Add(this.PickerTime);
       this.GrpboxDateTime.Location = new System.Drawing.Point(25, 284);
       this.GrpboxDateTime.Name = "GrpboxDateTime";
-      this.GrpboxDateTime.Size = new System.Drawing.Size(420, 84);
+      this.GrpboxDateTime.Size = new System.Drawing.Size(360, 84);
       this.GrpboxDateTime.TabIndex = 3;
       this.GrpboxDateTime.TabStop = false;
       this.GrpboxDateTime.Text = "Thời gian";
-      // 
-      // PickerTime
-      // 
-      this.PickerTime.CustomFormat = "HH:mm";
-      this.PickerTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-      this.PickerTime.Location = new System.Drawing.Point(207, 35);
-      this.PickerTime.Margin = new System.Windows.Forms.Padding(8);
-      this.PickerTime.Name = "PickerTime";
-      this.PickerTime.ShowUpDown = true;
-      this.PickerTime.Size = new System.Drawing.Size(96, 31);
-      this.PickerTime.TabIndex = 1;
       // 
       // PickerDate
       // 
@@ -136,24 +127,51 @@ namespace nJobee
       this.PickerDate.Location = new System.Drawing.Point(11, 35);
       this.PickerDate.Margin = new System.Windows.Forms.Padding(8);
       this.PickerDate.Name = "PickerDate";
-      this.PickerDate.Size = new System.Drawing.Size(180, 31);
+      this.PickerDate.Size = new System.Drawing.Size(166, 31);
       this.PickerDate.TabIndex = 0;
+      // 
+      // PickerTime
+      // 
+      this.PickerTime.CustomFormat = "HH:mm";
+      this.PickerTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+      this.PickerTime.Location = new System.Drawing.Point(193, 35);
+      this.PickerTime.Margin = new System.Windows.Forms.Padding(8);
+      this.PickerTime.Name = "PickerTime";
+      this.PickerTime.ShowUpDown = true;
+      this.PickerTime.Size = new System.Drawing.Size(82, 31);
+      this.PickerTime.TabIndex = 1;
+      // 
+      // ButtonOK
+      // 
+      this.ButtonOK.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
+      this.ButtonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.ButtonOK.Location = new System.Drawing.Point(396, 326);
+      this.ButtonOK.Margin = new System.Windows.Forms.Padding(8);
+      this.ButtonOK.Name = "ButtonOK";
+      this.ButtonOK.Size = new System.Drawing.Size(307, 42);
+      this.ButtonOK.TabIndex = 12;
+      this.ButtonOK.Text = "Hoàn tất";
+      this.ButtonOK.UseVisualStyleBackColor = false;
+      this.ButtonOK.Click += new System.EventHandler(this.ButtonOK_Click);
       // 
       // Descriptor
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = global::nJobee.Properties.Settings.Default.BackColorA;
-      this.ClientSize = new System.Drawing.Size(940, 400);
+      this.ClientSize = new System.Drawing.Size(720, 400);
+      this.Controls.Add(this.ButtonOK);
       this.Controls.Add(this.GrpboxDateTime);
       this.Controls.Add(this.GrpboxAddress);
       this.Font = global::nJobee.Properties.Settings.Default.Font;
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Margin = new System.Windows.Forms.Padding(6);
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "Descriptor";
-      this.Text = "Descriptor";
+      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+      this.Text = "Thông tin";
       this.Load += new System.EventHandler(this.Descriptor_Load);
       this.GrpboxAddress.ResumeLayout(false);
       this.GrpboxAddress.PerformLayout();
@@ -171,5 +189,6 @@ namespace nJobee
     private System.Windows.Forms.GroupBox GrpboxDateTime;
     private System.Windows.Forms.DateTimePicker PickerTime;
     private System.Windows.Forms.DateTimePicker PickerDate;
+    private System.Windows.Forms.Button ButtonOK;
   }
 }

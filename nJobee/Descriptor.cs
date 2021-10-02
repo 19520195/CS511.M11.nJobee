@@ -55,5 +55,28 @@ namespace nJobee
         ComboxWard.Items.Add(row["Name"]);
       ComboxWard.SelectedIndex = 0;
     }
+
+    private void ButtonOK_Click(object sender, EventArgs e)
+    {
+      DialogResult = DialogResult.OK;
+      Dispose();
+    }
+
+    public string GetTimeValue()
+    {
+      return String.Format("{0:00}:{1:00} - {2:00}:{3:00}",
+        PickerTime.Value.Hour,
+        PickerTime.Value.Minute,
+        PickerTime.Value.Hour + 1,
+        PickerTime.Value.Minute + 30);
+    }
+
+    public string GetAddressValue()
+    {
+      string ward = ComboxWard.SelectedItem.ToString();
+      string district = ComboxDistrict.SelectedItem.ToString();
+      string province = ComboxProvince.SelectedItem.ToString();
+      return String.Format("{1}, {2}", ward, district, province);
+    }
   }
 }
