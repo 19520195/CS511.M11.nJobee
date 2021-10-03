@@ -8,6 +8,8 @@ namespace nJobee
 {
   static class Program
   {
+    public static Master master;
+
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
@@ -16,7 +18,9 @@ namespace nJobee
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Master());
+
+      master = new Master();
+      Application.Run(master);
     }
   }
 }

@@ -20,7 +20,6 @@ namespace nJobee
       ButtonHome.Click += ChangeSelection; 
       ButtonActivities.Click += ChangeSelection;
       ButtonAccount.Click += ChangeSelection;
-      ButtonSettings.Click += ChangeSelection;
     }
 
     private void Master_Load(object sender, EventArgs e)
@@ -56,9 +55,9 @@ namespace nJobee
       ShowUserControls(UCtrlAccount);
     }
 
-    private void ButtonSettings_Click(object sender, EventArgs e)
+    public bool UpdateActivities(Label label)
     {
-      //
+      return UCtrlActivities.AddActivity(label); 
     }
   }
 }

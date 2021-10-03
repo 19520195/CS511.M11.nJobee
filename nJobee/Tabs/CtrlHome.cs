@@ -60,8 +60,21 @@ namespace nJobee
         DialogResult result = MessageBox.Show("Click vào OK để hoàn tất thanh toán", "Xác nhận Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
         if (result == DialogResult.OK)
         {
-          System.Diagnostics.Process.Start("https://19520195.github.io/HTMLPublic/SuccessfulCash.html");
-          ResetCashState(); 
+          var activityDescriptor = new ActivitiyDescriptor();
+          activityDescriptor.Name = LabelServiceValue.Text;
+          activityDescriptor.Cash = LabelCashValue.Text;
+          activityDescriptor.Time = LabelTimeValue.Text;
+          activityDescriptor.Addr = LabelAddressValue.Text;
+          if (Program.master.UpdateActivities(activityDescriptor.ToLabel()))
+          {
+            System.Diagnostics.Process.Start("https://19520195.github.io/HTMLPublic/SuccessfulCash.html");
+          }
+          else
+          {
+            MessageBox.Show("Quá số lượng việc làm đăng tải", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+          }
+
+          ResetCashState();
         }
       }
     }
