@@ -12,6 +12,8 @@ namespace nJobee
 {
   public partial class CtrlHome : UserControl
   {
+    private string SelectedServiceName;
+
     public CtrlHome()
     {
       InitializeComponent();
@@ -24,40 +26,50 @@ namespace nJobee
 
     private void ButtonCleaning_Click(object sender, EventArgs e)
     {
+      SelectedServiceName = ((Control)sender).Text;
       ShowDescriptor(new JobDescr.JobdCleaning());
     }
 
     private void ButtonGroceryAssistance_Click(object sender, EventArgs e)
     {
+      SelectedServiceName = ((Control)sender).Text;
       ShowDescriptor(new JobDescr.JobdGroceryAssistance());
     }
 
     private void ButtonACService_Click(object sender, EventArgs e)
     {
+      SelectedServiceName = ((Control)sender).Text;
       ShowDescriptor(new JobDescr.JobdACService());
     }
 
     private void ButtonDisinfectionService_Click(object sender, EventArgs e)
     {
+      SelectedServiceName = ((Control)sender).Text;
       ShowDescriptor(new JobDescr.JobdDisinfectionService());
     }
 
     private void ButtonLaudry_Click(object sender, EventArgs e)
     {
+      SelectedServiceName = ((Control)sender).Text;
       ShowDescriptor(new JobDescr.JobdLaudry());
     }
 
     private void ButtonHomeCooking_Click(object sender, EventArgs e)
     {
+      SelectedServiceName = ((Control)sender).Text;
       ShowDescriptor(new JobDescr.JobdCooking());
     }
 
     private void ButtonCash_Click(object sender, EventArgs e)
     {
-      DialogResult result = MessageBox.Show("Click vào OK để hoàn tất thanh toán", "Xác nhận Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-      if (result == DialogResult.OK)
+      if (SelectedServiceName == null) MessageBox.Show("Bạn chưa chọn gì cả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+      else
       {
-        System.Diagnostics.Process.Start("http://google.com");
+        DialogResult result = MessageBox.Show("Click vào OK để hoàn tất thanh toán", "Xác nhận Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+        if (result == DialogResult.OK)
+        {
+          System.Diagnostics.Process.Start("http://google.com");
+        }
       }
     }
 
