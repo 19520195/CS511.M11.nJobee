@@ -67,5 +67,10 @@ namespace nJobee
       }
       else ResetCashState();
     }
+
+    private void ButtonACService_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdACService());
+    }
   }
 }

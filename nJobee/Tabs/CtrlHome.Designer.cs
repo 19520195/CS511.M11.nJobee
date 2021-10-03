@@ -137,6 +137,7 @@ namespace nJobee
       this.ButtonACService.Text = "Dọn Máy Lạnh";
       this.ButtonACService.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
       this.ButtonACService.UseVisualStyleBackColor = false;
+      this.ButtonACService.Click += new System.EventHandler(this.ButtonACService_Click);
       // 
       // ButtonCleaning
       // 

@@ -73,6 +73,12 @@
     <Compile Include="JobDescr\IJobd.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="JobDescr\JobdACService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdACService.Designer.cs">
+      <DependentUpon>JobdACService.cs</DependentUpon>
+    </Compile>
     <Compile Include="JobDescr\JobdCleaning.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="Descriptor.resx">
       <DependentUpon>Descriptor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdACService.resx">
+      <DependentUpon>JobdACService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobDescr\JobdCleaning.resx">
       <DependentUpon>JobdCleaning.cs</DependentUpon>
