@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>nJobee.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\nJobee.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -64,16 +64,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CtrlActivities.cs">
+    <Compile Include="Components\ActivitiyDescriptor.cs" />
+    <Compile Include="Descriptor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Descriptor.Designer.cs">
+      <DependentUpon>Descriptor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\IJobd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrlActivities.Designer.cs">
+    <Compile Include="JobDescr\JobdACService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdACService.Designer.cs">
+      <DependentUpon>JobdACService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\JobdCleaning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdCleaning.Designer.cs">
+      <DependentUpon>JobdCleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\JobdCooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdCooking.Designer.cs">
+      <DependentUpon>JobdCooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\JobdDisinfectionService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdDisinfectionService.Designer.cs">
+      <DependentUpon>JobdDisinfectionService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\JobdGroceryAssistance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdGroceryAssistance.Designer.cs">
+      <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescr\JobdLaudry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdLaudry.Designer.cs">
+      <DependentUpon>JobdLaudry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\CtrlActivities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\CtrlActivities.Designer.cs">
       <DependentUpon>CtrlActivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="CtrlHome.cs">
+    <Compile Include="Tabs\CtrlHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrlHome.Designer.cs">
+    <Compile Include="Tabs\CtrlHome.Designer.cs">
       <DependentUpon>CtrlHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Master.cs">
@@ -84,16 +130,37 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CtrlAccount.cs">
+    <Compile Include="Tabs\CtrlAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrlAccount.Designer.cs">
+    <Compile Include="Tabs\CtrlAccount.Designer.cs">
       <DependentUpon>CtrlAccount.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CtrlActivities.resx">
+    <EmbeddedResource Include="Descriptor.resx">
+      <DependentUpon>Descriptor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdACService.resx">
+      <DependentUpon>JobdACService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdCleaning.resx">
+      <DependentUpon>JobdCleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdCooking.resx">
+      <DependentUpon>JobdCooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdDisinfectionService.resx">
+      <DependentUpon>JobdDisinfectionService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdGroceryAssistance.resx">
+      <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdLaudry.resx">
+      <DependentUpon>JobdLaudry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\CtrlActivities.resx">
       <DependentUpon>CtrlActivities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrlHome.resx">
+    <EmbeddedResource Include="Tabs\CtrlHome.resx">
       <DependentUpon>CtrlHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master.resx">
@@ -109,7 +176,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="CtrlAccount.resx">
+    <EmbeddedResource Include="Tabs\CtrlAccount.resx">
       <DependentUpon>CtrlAccount.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -141,7 +208,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="nJobee.ico" />
+    <Content Include="Resources\nJobee.ico" />
+    <None Include="Resources\Vietnam.xml" />
     <None Include="Resources\DefaultBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,9 +12,24 @@ namespace nJobee
 {
   public partial class CtrlActivities : UserControl
   {
+    private int ActivityCount;
+
     public CtrlActivities()
     {
       InitializeComponent();
+      ActivityCount = 0; 
+    }
+
+    public bool AddActivity(Label label)
+    {
+      if (ActivityCount < TabpanelActivities.RowCount)
+      {
+        TabpanelActivities.Controls.Add(label); 
+        ActivityCount++; 
+        return true;
+      }
+
+      return false;
     }
   }
 }

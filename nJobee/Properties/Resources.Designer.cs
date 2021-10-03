@@ -79,5 +79,39 @@ namespace nJobee.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;UnitOfAdministration&gt;
+        ///	&lt;Unit&gt;
+        ///		&lt;ID&gt;01&lt;/ID&gt;
+        ///		&lt;Name&gt;Thành phố Hà Nội&lt;/Name&gt;
+        ///		&lt;Level&gt;Province&lt;/Level&gt;
+        ///	&lt;/Unit&gt;
+        ///	&lt;Unit&gt;
+        ///		&lt;ID&gt;02&lt;/ID&gt;
+        ///		&lt;Name&gt;Tỉnh Hà Giang&lt;/Name&gt;
+        ///		&lt;Level&gt;Province&lt;/Level&gt;
+        ///	&lt;/Unit&gt;
+        ///	&lt;Unit&gt;
+        ///		&lt;ID&gt;04&lt;/ID&gt;
+        ///		&lt;Name&gt;Tỉnh Cao Bằng&lt;/Name&gt;
+        ///		&lt;Level&gt;Province&lt;/Level&gt;
+        ///	&lt;/Unit&gt;
+        ///	&lt;Unit&gt;
+        ///		&lt;ID&gt;06&lt;/ID&gt;
+        ///		&lt;Name&gt;Tỉnh Bắc Kạn&lt;/Name&gt;
+        ///		&lt;Level&gt;Province&lt;/Level&gt;
+        ///	&lt;/Unit&gt;
+        ///	&lt;Unit&gt;
+        ///		&lt;ID&gt;08&lt;/ID&gt;
+        ///		&lt;Name&gt;Tỉnh Tuyên Quang&lt;/Name&gt;
+        ///		&lt;Level&gt;Province&lt;/Level&gt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Vietnam {
+            get {
+                return ResourceManager.GetString("Vietnam", resourceCulture);
+            }
+        }
     }
 }
