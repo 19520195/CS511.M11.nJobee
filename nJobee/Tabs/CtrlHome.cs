@@ -60,7 +60,7 @@ namespace nJobee
         DialogResult result = MessageBox.Show("Click vào OK để hoàn tất thanh toán", "Xác nhận Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
         if (result == DialogResult.OK)
         {
-          System.Diagnostics.Process.Start("http://google.com");
+          System.Diagnostics.Process.Start("https://19520195.github.io/HTMLPublic/SuccessfulCash.html");
         }
       }
     }
