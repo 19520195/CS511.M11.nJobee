@@ -61,12 +61,14 @@ namespace nJobee
         if (result == DialogResult.OK)
         {
           System.Diagnostics.Process.Start("https://19520195.github.io/HTMLPublic/SuccessfulCash.html");
+          ResetCashState(); 
         }
       }
     }
 
     private void ResetCashState()
     {
+      LabelServiceValue.Text = ""; 
       LabelCashValue.Text = "0đ";
       LabelTimeValue.Text = "Chưa xác định";
       LabelAddressValue.Text = "Chưa xác định";
