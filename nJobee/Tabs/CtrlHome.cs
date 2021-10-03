@@ -32,6 +32,21 @@ namespace nJobee
       ShowDescriptor(new JobDescr.JobdGroceryAssistance());
     }
 
+    private void ButtonACService_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdACService());
+    }
+
+    private void ButtonDisinfectionService_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdDisinfectionService());
+    }
+
+    private void ButtonLaudry_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdLaudry());
+    }
+
     private void ButtonHomeCooking_Click(object sender, EventArgs e)
     {
       ShowDescriptor(new JobDescr.JobdCooking());
@@ -66,16 +81,6 @@ namespace nJobee
         LabelAddressValue.Text = descriptor.GetAddressValue();
       }
       else ResetCashState();
-    }
-
-    private void ButtonACService_Click(object sender, EventArgs e)
-    {
-      ShowDescriptor(new JobDescr.JobdACService());
-    }
-
-    private void ButtonDisinfectionService_Click(object sender, EventArgs e)
-    {
-      ShowDescriptor(new JobDescr.JobdDisinfectionService());
     }
   }
 }

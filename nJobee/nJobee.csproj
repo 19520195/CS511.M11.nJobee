@@ -103,6 +103,12 @@
     <Compile Include="JobDescr\JobdGroceryAssistance.Designer.cs">
       <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobDescr\JobdLaudry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdLaudry.Designer.cs">
+      <DependentUpon>JobdLaudry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\CtrlActivities.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JobDescr\JobdGroceryAssistance.resx">
       <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdLaudry.resx">
+      <DependentUpon>JobdLaudry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\CtrlActivities.resx">
       <DependentUpon>CtrlActivities.cs</DependentUpon>

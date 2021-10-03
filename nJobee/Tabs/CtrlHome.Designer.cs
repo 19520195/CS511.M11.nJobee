@@ -103,6 +103,7 @@ namespace nJobee
       this.ButtonLaudry.Text = "Giặt Ủi";
       this.ButtonLaudry.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
       this.ButtonLaudry.UseVisualStyleBackColor = false;
+      this.ButtonLaudry.Click += new System.EventHandler(this.ButtonLaudry_Click);
       // 
       // ButtonDisinfectionService
       // 
