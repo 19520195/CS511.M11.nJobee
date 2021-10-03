@@ -91,6 +91,12 @@
     <Compile Include="JobDescr\JobdCooking.Designer.cs">
       <DependentUpon>JobdCooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobDescr\JobdDisinfectionService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JobDescr\JobdDisinfectionService.Designer.cs">
+      <DependentUpon>JobdDisinfectionService.cs</DependentUpon>
+    </Compile>
     <Compile Include="JobDescr\JobdGroceryAssistance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JobDescr\JobdCooking.resx">
       <DependentUpon>JobdCooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDescr\JobdDisinfectionService.resx">
+      <DependentUpon>JobdDisinfectionService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobDescr\JobdGroceryAssistance.resx">
       <DependentUpon>JobdGroceryAssistance.cs</DependentUpon>

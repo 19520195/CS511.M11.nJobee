@@ -120,6 +120,7 @@ namespace nJobee
       this.ButtonDisinfectionService.Text = "Khử khuẩn";
       this.ButtonDisinfectionService.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
       this.ButtonDisinfectionService.UseVisualStyleBackColor = false;
+      this.ButtonDisinfectionService.Click += new System.EventHandler(this.ButtonDisinfectionService_Click);
       // 
       // ButtonACService
       // 

@@ -72,5 +72,10 @@ namespace nJobee
     {
       ShowDescriptor(new JobDescr.JobdACService());
     }
+
+    private void ButtonDisinfectionService_Click(object sender, EventArgs e)
+    {
+      ShowDescriptor(new JobDescr.JobdDisinfectionService());
+    }
   }
 }
