@@ -44,6 +44,8 @@ namespace nJobee
       this.LabelTimeValue = new System.Windows.Forms.Label();
       this.LabelCashValue = new System.Windows.Forms.Label();
       this.LabelTime = new System.Windows.Forms.Label();
+      this.LabelService = new System.Windows.Forms.Label();
+      this.LabelServiceValue = new System.Windows.Forms.Label();
       this.TabpanelFunctions.SuspendLayout();
       this.TabpanelCash.SuspendLayout();
       this.SuspendLayout();
@@ -180,10 +182,10 @@ namespace nJobee
       // LabelCash
       // 
       this.LabelCash.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelCash.Location = new System.Drawing.Point(4, 4);
+      this.LabelCash.Location = new System.Drawing.Point(4, 39);
       this.LabelCash.Margin = new System.Windows.Forms.Padding(4);
       this.LabelCash.Name = "LabelCash";
-      this.LabelCash.Size = new System.Drawing.Size(154, 33);
+      this.LabelCash.Size = new System.Drawing.Size(154, 27);
       this.LabelCash.TabIndex = 1;
       this.LabelCash.Text = "Tổng tiền";
       this.LabelCash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -192,7 +194,7 @@ namespace nJobee
       // 
       this.ButtonCash.BackColor = global::nJobee.Properties.Settings.Default.BackColorC;
       this.ButtonCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.ButtonCash.Location = new System.Drawing.Point(206, 474);
+      this.ButtonCash.Location = new System.Drawing.Point(206, 481);
       this.ButtonCash.Margin = new System.Windows.Forms.Padding(8);
       this.ButtonCash.Name = "ButtonCash";
       this.ButtonCash.Size = new System.Drawing.Size(183, 42);
@@ -206,29 +208,32 @@ namespace nJobee
       this.TabpanelCash.ColumnCount = 2;
       this.TabpanelCash.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
       this.TabpanelCash.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-      this.TabpanelCash.Controls.Add(this.LabelAddress, 0, 2);
-      this.TabpanelCash.Controls.Add(this.LabelAddressValue, 0, 2);
-      this.TabpanelCash.Controls.Add(this.LabelTimeValue, 1, 1);
-      this.TabpanelCash.Controls.Add(this.LabelCashValue, 1, 0);
-      this.TabpanelCash.Controls.Add(this.LabelTime, 0, 1);
-      this.TabpanelCash.Controls.Add(this.LabelCash, 0, 0);
-      this.TabpanelCash.Location = new System.Drawing.Point(35, 341);
-      this.TabpanelCash.Margin = new System.Windows.Forms.Padding(16);
+      this.TabpanelCash.Controls.Add(this.LabelAddress, 0, 3);
+      this.TabpanelCash.Controls.Add(this.LabelTime, 0, 2);
+      this.TabpanelCash.Controls.Add(this.LabelCash, 0, 1);
+      this.TabpanelCash.Controls.Add(this.LabelCashValue, 1, 1);
+      this.TabpanelCash.Controls.Add(this.LabelAddressValue, 1, 3);
+      this.TabpanelCash.Controls.Add(this.LabelTimeValue, 1, 2);
+      this.TabpanelCash.Controls.Add(this.LabelService, 0, 0);
+      this.TabpanelCash.Controls.Add(this.LabelServiceValue, 1, 0);
+      this.TabpanelCash.Location = new System.Drawing.Point(35, 333);
+      this.TabpanelCash.Margin = new System.Windows.Forms.Padding(8);
       this.TabpanelCash.Name = "TabpanelCash";
-      this.TabpanelCash.RowCount = 3;
-      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.TabpanelCash.Size = new System.Drawing.Size(650, 125);
+      this.TabpanelCash.RowCount = 4;
+      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+      this.TabpanelCash.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+      this.TabpanelCash.Size = new System.Drawing.Size(650, 140);
       this.TabpanelCash.TabIndex = 12;
       // 
       // LabelAddress
       // 
       this.LabelAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelAddress.Location = new System.Drawing.Point(4, 86);
+      this.LabelAddress.Location = new System.Drawing.Point(4, 109);
       this.LabelAddress.Margin = new System.Windows.Forms.Padding(4);
       this.LabelAddress.Name = "LabelAddress";
-      this.LabelAddress.Size = new System.Drawing.Size(154, 35);
+      this.LabelAddress.Size = new System.Drawing.Size(154, 27);
       this.LabelAddress.TabIndex = 6;
       this.LabelAddress.Text = "Địa chỉ";
       this.LabelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -236,43 +241,64 @@ namespace nJobee
       // LabelAddressValue
       // 
       this.LabelAddressValue.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelAddressValue.Location = new System.Drawing.Point(166, 86);
+      this.LabelAddressValue.Location = new System.Drawing.Point(166, 109);
       this.LabelAddressValue.Margin = new System.Windows.Forms.Padding(4);
       this.LabelAddressValue.Name = "LabelAddressValue";
-      this.LabelAddressValue.Size = new System.Drawing.Size(480, 35);
+      this.LabelAddressValue.Size = new System.Drawing.Size(480, 27);
       this.LabelAddressValue.TabIndex = 7;
       this.LabelAddressValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // LabelTimeValue
       // 
       this.LabelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelTimeValue.Location = new System.Drawing.Point(166, 45);
+      this.LabelTimeValue.Location = new System.Drawing.Point(166, 74);
       this.LabelTimeValue.Margin = new System.Windows.Forms.Padding(4);
       this.LabelTimeValue.Name = "LabelTimeValue";
-      this.LabelTimeValue.Size = new System.Drawing.Size(480, 33);
+      this.LabelTimeValue.Size = new System.Drawing.Size(480, 27);
       this.LabelTimeValue.TabIndex = 5;
       this.LabelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // LabelCashValue
       // 
       this.LabelCashValue.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelCashValue.Location = new System.Drawing.Point(166, 4);
+      this.LabelCashValue.Location = new System.Drawing.Point(166, 39);
       this.LabelCashValue.Margin = new System.Windows.Forms.Padding(4);
       this.LabelCashValue.Name = "LabelCashValue";
-      this.LabelCashValue.Size = new System.Drawing.Size(480, 33);
+      this.LabelCashValue.Size = new System.Drawing.Size(480, 27);
       this.LabelCashValue.TabIndex = 4;
       this.LabelCashValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // LabelTime
       // 
       this.LabelTime.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelTime.Location = new System.Drawing.Point(4, 45);
+      this.LabelTime.Location = new System.Drawing.Point(4, 74);
       this.LabelTime.Margin = new System.Windows.Forms.Padding(4);
       this.LabelTime.Name = "LabelTime";
-      this.LabelTime.Size = new System.Drawing.Size(154, 33);
+      this.LabelTime.Size = new System.Drawing.Size(154, 27);
       this.LabelTime.TabIndex = 3;
       this.LabelTime.Text = "Thời gian làm";
       this.LabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      // 
+      // LabelService
+      // 
+      this.LabelService.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelService.Location = new System.Drawing.Point(4, 4);
+      this.LabelService.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelService.Name = "LabelService";
+      this.LabelService.Size = new System.Drawing.Size(154, 27);
+      this.LabelService.TabIndex = 8;
+      this.LabelService.Text = "Dịch vụ";
+      this.LabelService.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      // 
+      // LabelServiceValue
+      // 
+      this.LabelServiceValue.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelServiceValue.Location = new System.Drawing.Point(166, 4);
+      this.LabelServiceValue.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelServiceValue.Name = "LabelServiceValue";
+      this.LabelServiceValue.Size = new System.Drawing.Size(480, 27);
+      this.LabelServiceValue.TabIndex = 9;
+      this.LabelServiceValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // CtrlHome
       // 
@@ -307,5 +333,7 @@ namespace nJobee
     private System.Windows.Forms.Label LabelCashValue;
     private System.Windows.Forms.Label LabelAddress;
     private System.Windows.Forms.Label LabelAddressValue;
+    private System.Windows.Forms.Label LabelService;
+    private System.Windows.Forms.Label LabelServiceValue;
   }
 }

@@ -12,8 +12,6 @@ namespace nJobee
 {
   public partial class CtrlHome : UserControl
   {
-    private string SelectedServiceName;
-
     public CtrlHome()
     {
       InitializeComponent();
@@ -26,43 +24,37 @@ namespace nJobee
 
     private void ButtonCleaning_Click(object sender, EventArgs e)
     {
-      SelectedServiceName = ((Control)sender).Text;
-      ShowDescriptor(new JobDescr.JobdCleaning());
+      ShowDescriptor(((Control)sender).Text, new JobDescr.JobdCleaning());
     }
 
     private void ButtonGroceryAssistance_Click(object sender, EventArgs e)
     {
-      SelectedServiceName = ((Control)sender).Text;
-      ShowDescriptor(new JobDescr.JobdGroceryAssistance());
+      ShowDescriptor(((Control)sender).Text, new JobDescr.JobdGroceryAssistance());
     }
 
     private void ButtonACService_Click(object sender, EventArgs e)
     {
-      SelectedServiceName = ((Control)sender).Text;
-      ShowDescriptor(new JobDescr.JobdACService());
+      ShowDescriptor(((Control)sender).Text, new JobDescr.JobdACService());
     }
 
     private void ButtonDisinfectionService_Click(object sender, EventArgs e)
     {
-      SelectedServiceName = ((Control)sender).Text;
-      ShowDescriptor(new JobDescr.JobdDisinfectionService());
+      ShowDescriptor(((Control)sender).Text, new JobDescr.JobdDisinfectionService());
     }
 
     private void ButtonLaudry_Click(object sender, EventArgs e)
     {
-      SelectedServiceName = ((Control)sender).Text;
-      ShowDescriptor(new JobDescr.JobdLaudry());
+      ShowDescriptor(((Control)sender).Text, new JobDescr.JobdLaudry());
     }
 
     private void ButtonHomeCooking_Click(object sender, EventArgs e)
     {
-      SelectedServiceName = ((Control)sender).Text;
-      ShowDescriptor(new JobDescr.JobdCooking());
+      ShowDescriptor(((Control)sender).Text, new JobDescr.JobdCooking());
     }
 
     private void ButtonCash_Click(object sender, EventArgs e)
     {
-      if (SelectedServiceName == null) MessageBox.Show("Bạn chưa chọn gì cả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+      if (LabelServiceValue.Text.Length == 0) MessageBox.Show("Bạn chưa chọn gì cả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
       else
       {
         DialogResult result = MessageBox.Show("Click vào OK để hoàn tất thanh toán", "Xác nhận Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -80,7 +72,7 @@ namespace nJobee
       LabelAddressValue.Text = "Chưa xác định";
     }
 
-    private void ShowDescriptor(JobDescr.IJobd Jobd)
+    private void ShowDescriptor(string JobName, JobDescr.IJobd Jobd)
     {
       Descriptor descriptor = new Descriptor();
       descriptor.AddJobDescription(Jobd);
@@ -88,6 +80,7 @@ namespace nJobee
       DialogResult result = descriptor.ShowDialog();
       if (result == DialogResult.OK)
       {
+        LabelServiceValue.Text = JobName;
         LabelCashValue.Text = descriptor.GetCashValue();
         LabelTimeValue.Text = descriptor.GetTimeValue();
         LabelAddressValue.Text = descriptor.GetAddressValue();
