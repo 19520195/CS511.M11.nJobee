@@ -29,6 +29,8 @@ namespace nJobee
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlHome));
       this.TabpanelFunctions = new System.Windows.Forms.TableLayoutPanel();
       this.ButtonHomeCooking = new System.Windows.Forms.Button();
       this.ButtonLaudry = new System.Windows.Forms.Button();
@@ -40,12 +42,13 @@ namespace nJobee
       this.ButtonCash = new System.Windows.Forms.Button();
       this.TabpanelCash = new System.Windows.Forms.TableLayoutPanel();
       this.LabelAddress = new System.Windows.Forms.Label();
+      this.LabelTime = new System.Windows.Forms.Label();
+      this.LabelCashValue = new System.Windows.Forms.Label();
       this.LabelAddressValue = new System.Windows.Forms.Label();
       this.LabelTimeValue = new System.Windows.Forms.Label();
-      this.LabelCashValue = new System.Windows.Forms.Label();
-      this.LabelTime = new System.Windows.Forms.Label();
       this.LabelService = new System.Windows.Forms.Label();
       this.LabelServiceValue = new System.Windows.Forms.Label();
+      this.ImlistControl = new System.Windows.Forms.ImageList(this.components);
       this.TabpanelFunctions.SuspendLayout();
       this.TabpanelCash.SuspendLayout();
       this.SuspendLayout();
@@ -78,10 +81,13 @@ namespace nJobee
       this.ButtonHomeCooking.FlatAppearance.BorderSize = 0;
       this.ButtonHomeCooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonHomeCooking.Font = new System.Drawing.Font("Montserrat", 10F);
+      this.ButtonHomeCooking.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.ButtonHomeCooking.ImageKey = "Cooking.png";
+      this.ButtonHomeCooking.ImageList = this.ImlistControl;
       this.ButtonHomeCooking.Location = new System.Drawing.Point(178, 161);
       this.ButtonHomeCooking.Margin = new System.Windows.Forms.Padding(16);
       this.ButtonHomeCooking.Name = "ButtonHomeCooking";
-      this.ButtonHomeCooking.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+      this.ButtonHomeCooking.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
       this.ButtonHomeCooking.Size = new System.Drawing.Size(130, 113);
       this.ButtonHomeCooking.TabIndex = 9;
       this.ButtonHomeCooking.Text = "Nấu Ăn";
@@ -96,10 +102,13 @@ namespace nJobee
       this.ButtonLaudry.FlatAppearance.BorderSize = 0;
       this.ButtonLaudry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonLaudry.Font = new System.Drawing.Font("Montserrat", 10F);
+      this.ButtonLaudry.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.ButtonLaudry.ImageKey = "Laudry.png";
+      this.ButtonLaudry.ImageList = this.ImlistControl;
       this.ButtonLaudry.Location = new System.Drawing.Point(16, 161);
       this.ButtonLaudry.Margin = new System.Windows.Forms.Padding(16);
       this.ButtonLaudry.Name = "ButtonLaudry";
-      this.ButtonLaudry.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+      this.ButtonLaudry.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
       this.ButtonLaudry.Size = new System.Drawing.Size(130, 113);
       this.ButtonLaudry.TabIndex = 8;
       this.ButtonLaudry.Text = "Giặt Ủi";
@@ -114,10 +123,13 @@ namespace nJobee
       this.ButtonDisinfectionService.FlatAppearance.BorderSize = 0;
       this.ButtonDisinfectionService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonDisinfectionService.Font = new System.Drawing.Font("Montserrat", 10F);
+      this.ButtonDisinfectionService.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.ButtonDisinfectionService.ImageKey = "DisinfectionService.png";
+      this.ButtonDisinfectionService.ImageList = this.ImlistControl;
       this.ButtonDisinfectionService.Location = new System.Drawing.Point(502, 16);
       this.ButtonDisinfectionService.Margin = new System.Windows.Forms.Padding(16);
       this.ButtonDisinfectionService.Name = "ButtonDisinfectionService";
-      this.ButtonDisinfectionService.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+      this.ButtonDisinfectionService.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
       this.ButtonDisinfectionService.Size = new System.Drawing.Size(132, 113);
       this.ButtonDisinfectionService.TabIndex = 7;
       this.ButtonDisinfectionService.Text = "Khử khuẩn";
@@ -132,10 +144,13 @@ namespace nJobee
       this.ButtonACService.FlatAppearance.BorderSize = 0;
       this.ButtonACService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonACService.Font = new System.Drawing.Font("Montserrat", 10F);
+      this.ButtonACService.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.ButtonACService.ImageKey = "ACService.png";
+      this.ButtonACService.ImageList = this.ImlistControl;
       this.ButtonACService.Location = new System.Drawing.Point(340, 16);
       this.ButtonACService.Margin = new System.Windows.Forms.Padding(16);
       this.ButtonACService.Name = "ButtonACService";
-      this.ButtonACService.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+      this.ButtonACService.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
       this.ButtonACService.Size = new System.Drawing.Size(130, 113);
       this.ButtonACService.TabIndex = 2;
       this.ButtonACService.Text = "Dọn Máy Lạnh";
@@ -150,10 +165,13 @@ namespace nJobee
       this.ButtonCleaning.FlatAppearance.BorderSize = 0;
       this.ButtonCleaning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonCleaning.Font = new System.Drawing.Font("Montserrat", 10F);
+      this.ButtonCleaning.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.ButtonCleaning.ImageIndex = 0;
+      this.ButtonCleaning.ImageList = this.ImlistControl;
       this.ButtonCleaning.Location = new System.Drawing.Point(16, 16);
       this.ButtonCleaning.Margin = new System.Windows.Forms.Padding(16);
       this.ButtonCleaning.Name = "ButtonCleaning";
-      this.ButtonCleaning.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+      this.ButtonCleaning.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
       this.ButtonCleaning.Size = new System.Drawing.Size(130, 113);
       this.ButtonCleaning.TabIndex = 0;
       this.ButtonCleaning.Text = "Tổng Vệ Sinh";
@@ -168,10 +186,13 @@ namespace nJobee
       this.ButtonGroceryAssistance.FlatAppearance.BorderSize = 0;
       this.ButtonGroceryAssistance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.ButtonGroceryAssistance.Font = new System.Drawing.Font("Montserrat", 10F);
+      this.ButtonGroceryAssistance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.ButtonGroceryAssistance.ImageKey = "GroceryService.png";
+      this.ButtonGroceryAssistance.ImageList = this.ImlistControl;
       this.ButtonGroceryAssistance.Location = new System.Drawing.Point(178, 16);
       this.ButtonGroceryAssistance.Margin = new System.Windows.Forms.Padding(16);
       this.ButtonGroceryAssistance.Name = "ButtonGroceryAssistance";
-      this.ButtonGroceryAssistance.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+      this.ButtonGroceryAssistance.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
       this.ButtonGroceryAssistance.Size = new System.Drawing.Size(130, 113);
       this.ButtonGroceryAssistance.TabIndex = 13;
       this.ButtonGroceryAssistance.Text = "Đi Chợ";
@@ -238,6 +259,27 @@ namespace nJobee
       this.LabelAddress.Text = "Địa chỉ";
       this.LabelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
+      // LabelTime
+      // 
+      this.LabelTime.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelTime.Location = new System.Drawing.Point(4, 74);
+      this.LabelTime.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelTime.Name = "LabelTime";
+      this.LabelTime.Size = new System.Drawing.Size(154, 27);
+      this.LabelTime.TabIndex = 3;
+      this.LabelTime.Text = "Thời gian làm";
+      this.LabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      // 
+      // LabelCashValue
+      // 
+      this.LabelCashValue.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.LabelCashValue.Location = new System.Drawing.Point(166, 39);
+      this.LabelCashValue.Margin = new System.Windows.Forms.Padding(4);
+      this.LabelCashValue.Name = "LabelCashValue";
+      this.LabelCashValue.Size = new System.Drawing.Size(480, 27);
+      this.LabelCashValue.TabIndex = 4;
+      this.LabelCashValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
       // LabelAddressValue
       // 
       this.LabelAddressValue.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -257,27 +299,6 @@ namespace nJobee
       this.LabelTimeValue.Size = new System.Drawing.Size(480, 27);
       this.LabelTimeValue.TabIndex = 5;
       this.LabelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      // 
-      // LabelCashValue
-      // 
-      this.LabelCashValue.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelCashValue.Location = new System.Drawing.Point(166, 39);
-      this.LabelCashValue.Margin = new System.Windows.Forms.Padding(4);
-      this.LabelCashValue.Name = "LabelCashValue";
-      this.LabelCashValue.Size = new System.Drawing.Size(480, 27);
-      this.LabelCashValue.TabIndex = 4;
-      this.LabelCashValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      // 
-      // LabelTime
-      // 
-      this.LabelTime.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LabelTime.Location = new System.Drawing.Point(4, 74);
-      this.LabelTime.Margin = new System.Windows.Forms.Padding(4);
-      this.LabelTime.Name = "LabelTime";
-      this.LabelTime.Size = new System.Drawing.Size(154, 27);
-      this.LabelTime.TabIndex = 3;
-      this.LabelTime.Text = "Thời gian làm";
-      this.LabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
       // LabelService
       // 
@@ -299,6 +320,17 @@ namespace nJobee
       this.LabelServiceValue.Size = new System.Drawing.Size(480, 27);
       this.LabelServiceValue.TabIndex = 9;
       this.LabelServiceValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // ImlistControl
+      // 
+      this.ImlistControl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImlistControl.ImageStream")));
+      this.ImlistControl.TransparentColor = System.Drawing.Color.Transparent;
+      this.ImlistControl.Images.SetKeyName(0, "Cleaning.png");
+      this.ImlistControl.Images.SetKeyName(1, "GroceryService.png");
+      this.ImlistControl.Images.SetKeyName(2, "ACService.png");
+      this.ImlistControl.Images.SetKeyName(3, "DisinfectionService.png");
+      this.ImlistControl.Images.SetKeyName(4, "Laudry.png");
+      this.ImlistControl.Images.SetKeyName(5, "Cooking.png");
       // 
       // CtrlHome
       // 
@@ -335,5 +367,6 @@ namespace nJobee
     private System.Windows.Forms.Label LabelAddressValue;
     private System.Windows.Forms.Label LabelService;
     private System.Windows.Forms.Label LabelServiceValue;
+    private System.Windows.Forms.ImageList ImlistControl;
   }
 }
